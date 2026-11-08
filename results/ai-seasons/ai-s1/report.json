@@ -1,0 +1,1073 @@
+{
+  "meta": {
+    "run": "ai-s1",
+    "lineup": "ai5",
+    "off": [],
+    "sets": [],
+    "configHash": "bf6545d6",
+    "mode": "ai",
+    "ai": "live (claude-sonnet-5-5 (claude, high), claude-sonnet-5-5 (claude, high), claude-haiku-5-5 (claude, xhigh), openai/gpt-6.1-sol (openrouter), moonshotai/kimi-k3.1-pro (openrouter))"
+  },
+  "seeds": [
+    1
+  ],
+  "seasons": 1,
+  "interacting": {
+    "interactionsPerAgentPerDay": 16.27,
+    "involvedShare": 0.5,
+    "uniquePairs": 43,
+    "possiblePairs": 45,
+    "everyoneMet4": 1,
+    "minPartners": 7,
+    "rivalries": 16,
+    "seasonsWith2Rivalries": 1,
+    "alliances": 3,
+    "kinds": {
+      "friendly": 23,
+      "hostile": 108,
+      "rival": 49,
+      "talk": 53,
+      "trade": 11
+    },
+    "messagesSent": 71,
+    "messagesAnswered": 25,
+    "promisesMade": 12,
+    "promisesKept": 4,
+    "promisesBroken": 8,
+    "tradesAgentAgent": 28,
+    "tradesBoughtFromNpc": 52,
+    "tradesSoldToNpc": 23
+  },
+  "interesting": {
+    "momentsPerSeason": 106,
+    "momentsByType": {
+      "arrest": 21,
+      "bounty_posted": 2,
+      "bounty_revealed": 1,
+      "callout_answered": 6,
+      "callout_ducked": 22,
+      "comeback": 3,
+      "escape": 2,
+      "eviction": 3,
+      "king_attempt": 1,
+      "lead_change": 2,
+      "promise_broken": 8,
+      "promise_kept": 4,
+      "revenge": 28,
+      "shooting": 3
+    },
+    "leadChanges": 2,
+    "seasonsWithBetrayalAnd2LeadChanges": 1,
+    "seasonsWithBetrayal": 1,
+    "seasonsWithKingAttempt": 1,
+    "topThirdRepeat": 0,
+    "turtle": null,
+    "winsByJob": {
+      "smuggler": 0,
+      "chemist": 0,
+      "dealer": 1,
+      "gunrunner": 0
+    },
+    "winsByBrain": {
+      "ai:claude-haiku-5-5": 0,
+      "ai:claude-sonnet-5-5": 0,
+      "ai:moonshotai/kimi-k3.1-pro": 0,
+      "ai:openai/gpt-6.1-sol": 1,
+      "hothead": 0,
+      "hustler": 0,
+      "saint": 0,
+      "showboat": 0,
+      "snake": 0
+    },
+    "actionMix": {
+      "move": 0.19,
+      "battle": 0.14,
+      "call_out": 0.11,
+      "crip_walk": 0.09,
+      "buy": 0.08,
+      "rest": 0.08,
+      "mug": 0.06,
+      "fistfight": 0.05,
+      "cook": 0.05,
+      "pickpocket": 0.02,
+      "deal": 0.02,
+      "push_npc": 0.02,
+      "drip_check": 0.02,
+      "run_cops": 0.01,
+      "shift": 0.01,
+      "run": 0.01,
+      "lay_low": 0.01,
+      "build": 0.01,
+      "kill_king": 0.01,
+      "shoot": 0.01,
+      "scout": 0.01,
+      "party": 0,
+      "bounty": 0,
+      "steal_car": 0,
+      "crate": 0
+    },
+    "topAction": {
+      "id": "move",
+      "share": 0.19
+    },
+    "copycatTopShare": 0.29,
+    "greedySimilarity": null
+  },
+  "watch": {
+    "minutesWatched": 1880700,
+    "viewerHours": 31345,
+    "startPool": 1000,
+    "audienceEnd": 1217.49,
+    "audienceEndRatio": 1.22,
+    "seasonsGrowing": 1,
+    "curve": [
+      993.6,
+      992.62,
+      995.28,
+      993.4,
+      1007.05,
+      1002.41,
+      1000.77,
+      1016.44,
+      1017.76,
+      1029.56,
+      1032.9,
+      1032.39,
+      1049.27,
+      1045.04,
+      1047.39,
+      1050.77,
+      1043.06,
+      1057.3,
+      1059.95,
+      1079.59,
+      1095.24,
+      1098.88,
+      1106.49,
+      1104.15,
+      1102.58,
+      1095.62,
+      1100.03,
+      1105.84,
+      1098,
+      1092.52,
+      1089.96,
+      1089.44,
+      1092.18,
+      1098.6,
+      1099.87,
+      1101.95,
+      1095.17,
+      1111.85,
+      1113.84,
+      1122.3,
+      1123.34,
+      1121.05,
+      1128.45,
+      1150.65,
+      1152.67,
+      1160.09,
+      1161.71,
+      1162.59,
+      1168.82,
+      1172.89,
+      1179.39,
+      1182.54,
+      1194.27,
+      1217.49
+    ],
+    "watching": [
+      45,
+      143.07,
+      266.3,
+      308.09,
+      483.39,
+      440.69,
+      429.33,
+      595.85,
+      585.4,
+      656.76,
+      650.22,
+      614.1,
+      704.19,
+      588.43,
+      572.15,
+      556.36,
+      466.53,
+      600.21,
+      599.97,
+      732.48,
+      778.7,
+      723.59,
+      712.33,
+      629.08,
+      583.69,
+      503.44,
+      539.73,
+      565.59,
+      473.85,
+      428.18,
+      425.91,
+      451.08,
+      494.34,
+      562.46,
+      580.07,
+      595.03,
+      536.44,
+      688.11,
+      654.73,
+      680.35,
+      638,
+      595.45,
+      630.17,
+      787.57,
+      728.74,
+      730.13,
+      676.39,
+      645.14,
+      657.27,
+      648.58,
+      675.94,
+      675.22,
+      746.64,
+      863.82
+    ],
+    "longestDull": 2,
+    "longestDullMax": 2,
+    "seasonsDullAtMost3": 1,
+    "longestStrongDull": 2,
+    "longestStrongDullMax": 2,
+    "seasonsStrongDullAtMost3": 1,
+    "viewerHoursBySeat": [
+      {
+        "id": "a01",
+        "name": "Vex",
+        "brains": "hothead",
+        "viewerHours": 3151
+      },
+      {
+        "id": "a02",
+        "name": "Kim",
+        "brains": "hustler",
+        "viewerHours": 2720
+      },
+      {
+        "id": "a03",
+        "name": "Penny",
+        "brains": "showboat",
+        "viewerHours": 2493
+      },
+      {
+        "id": "a04",
+        "name": "Dutch",
+        "brains": "snake",
+        "viewerHours": 3687
+      },
+      {
+        "id": "a05",
+        "name": "Moss",
+        "brains": "saint",
+        "viewerHours": 1561
+      },
+      {
+        "id": "a06",
+        "name": "Juno",
+        "brains": "ai:claude-sonnet-5-5",
+        "viewerHours": 1922
+      },
+      {
+        "id": "a07",
+        "name": "Rook",
+        "brains": "ai:claude-sonnet-5-5",
+        "viewerHours": 3273
+      },
+      {
+        "id": "a08",
+        "name": "Tally",
+        "brains": "ai:claude-haiku-5-5",
+        "viewerHours": 2875
+      },
+      {
+        "id": "a09",
+        "name": "Sable",
+        "brains": "ai:openai/gpt-6.1-sol",
+        "viewerHours": 4866
+      },
+      {
+        "id": "a10",
+        "name": "Wren",
+        "brains": "ai:moonshotai/kimi-k3.1-pro",
+        "viewerHours": 4797
+      }
+    ],
+    "viewerHoursByBrain": {
+      "ai:claude-haiku-5-5": 2875,
+      "ai:claude-sonnet-5-5": 2598,
+      "ai:moonshotai/kimi-k3.1-pro": 4797,
+      "ai:openai/gpt-6.1-sol": 4866,
+      "hothead": 3151,
+      "hustler": 2720,
+      "saint": 1561,
+      "showboat": 2493,
+      "snake": 3687
+    },
+    "viewerHoursByJob": {
+      "chemist": 2961,
+      "dealer": 4179,
+      "gunrunner": 2027,
+      "smuggler": 2936
+    }
+  },
+  "economy": {
+    "chemsSmuggled": 0,
+    "partsSmuggled": 8,
+    "productCooked": 63,
+    "productDealt": 29,
+    "dealCash": 725,
+    "gunsBuilt": 3,
+    "gunsSoldAgent": 0,
+    "gunsSoldNpc": 1,
+    "cashByDay": [
+      47.1,
+      34,
+      32.4
+    ],
+    "rentPaid": 15,
+    "evictions": 3,
+    "evictionsDay1": 2,
+    "rehoused": 0,
+    "nightThefts": 3,
+    "gearBought": {
+      "grill": 2,
+      "gun": 3
+    },
+    "seasonsWithAGun": 1,
+    "arrests": 21,
+    "jailShare": 0.16,
+    "hospitalShare": 0.01,
+    "deaths": 0,
+    "boardPrices": {
+      "chems": null,
+      "parts": 20,
+      "product": 13.42,
+      "guns": null
+    }
+  },
+  "marks": [
+    {
+      "q": 1,
+      "mark": "At least 40% of acting hours involve another agent",
+      "value": "50%",
+      "pass": true
+    },
+    {
+      "q": 1,
+      "mark": "Every agent interacts with at least 4 others per season",
+      "value": "100% of seasons (mean fewest partners 7)",
+      "pass": true
+    },
+    {
+      "q": 1,
+      "mark": "At least 2 rivalries per season",
+      "value": "mean 16; 100% of seasons",
+      "pass": true
+    },
+    {
+      "q": 2,
+      "mark": "At least 1 broken promise per season, and a lead change in most seasons",
+      "value": "broken promise in 100% of seasons; lead change in 100% of seasons",
+      "pass": true
+    },
+    {
+      "q": 2,
+      "mark": "At least 1 king attempt in most seasons",
+      "value": "100% of seasons",
+      "pass": true
+    },
+    {
+      "q": 2,
+      "mark": "Top agent finishes top third again in 50-70% of seeds",
+      "value": "0%",
+      "pass": false
+    },
+    {
+      "q": 2,
+      "mark": "Turtle finishes in the bottom third in at least 80% of seeds",
+      "value": "no turtle in this lineup",
+      "pass": null
+    },
+    {
+      "q": 2,
+      "mark": "Each job wins between 0.5x and 1.5x its share of seats",
+      "value": "smuggler 0% (20%), chemist 0% (30%), dealer 100% (30%), gunrunner 0% (20%)",
+      "pass": false
+    },
+    {
+      "q": 2,
+      "mark": "Copycat: most common action takes 40% or less of acting hours (all-greedy lineup)",
+      "value": "top share per hour 29%; overall top action move 19%",
+      "pass": null
+    },
+    {
+      "q": 3,
+      "mark": "The audience ends the season at least as big as it started",
+      "value": "end/start 1.22x; 100% of seasons",
+      "pass": true
+    },
+    {
+      "q": 3,
+      "mark": "Longest dull stretch is 3 acting hours or less",
+      "value": "strong moments only: mean 2, worst 2, 100% of seasons; any moment: mean 2, worst 2",
+      "pass": true
+    }
+  ],
+  "ai": {
+    "totals": {
+      "claude-sonnet-5-5": {
+        "calls": 108,
+        "failed": 0,
+        "in": 611304,
+        "out": 41083,
+        "cost": 1.0956,
+        "capped": 0
+      },
+      "claude-haiku-5-5": {
+        "calls": 54,
+        "failed": 5,
+        "in": 294643,
+        "out": 350114,
+        "cost": 0.1918,
+        "capped": 0
+      },
+      "openai/gpt-6.1-sol": {
+        "calls": 54,
+        "failed": 0,
+        "in": 218903,
+        "out": 5551,
+        "cost": 0.3559,
+        "capped": 0
+      },
+      "moonshotai/kimi-k3.1-pro": {
+        "calls": 54,
+        "failed": 12,
+        "in": 227391,
+        "out": 15265,
+        "cost": 0.3992,
+        "capped": 0
+      }
+    },
+    "spend": {
+      "cost": 2.0424,
+      "calls": 270
+    },
+    "perModel": {
+      "claude-sonnet-5-5": {
+        "api": "claude",
+        "efforts": [
+          "high"
+        ],
+        "seats": 2,
+        "calls": 108,
+        "in": 611304,
+        "out": 41083,
+        "reasoning": 31151,
+        "cost": 1.0956088,
+        "failed": 0,
+        "skipped": 0,
+        "cutoffs": 0,
+        "finishes": {
+          "end_turn": 108
+        },
+        "medianMs": 4194,
+        "p90Ms": 6145
+      },
+      "claude-haiku-5-5": {
+        "api": "claude",
+        "efforts": [
+          "xhigh"
+        ],
+        "seats": 1,
+        "calls": 54,
+        "in": 294643,
+        "out": 350114,
+        "reasoning": 345115,
+        "cost": 0.19178323999999997,
+        "failed": 5,
+        "skipped": 0,
+        "cutoffs": 5,
+        "finishes": {
+          "end_turn": 49,
+          "max_tokens": 5
+        },
+        "medianMs": 20060,
+        "p90Ms": 74125
+      },
+      "openai/gpt-6.1-sol": {
+        "api": "openrouter",
+        "efforts": [],
+        "seats": 1,
+        "calls": 54,
+        "in": 218903,
+        "out": 5551,
+        "reasoning": 1493,
+        "cost": 0.3558585,
+        "failed": 0,
+        "skipped": 0,
+        "cutoffs": 0,
+        "finishes": {
+          "stop": 54
+        },
+        "medianMs": 3053,
+        "p90Ms": 4950
+      },
+      "moonshotai/kimi-k3.1-pro": {
+        "api": "openrouter",
+        "efforts": [],
+        "seats": 1,
+        "calls": 54,
+        "in": 227391,
+        "out": 15265,
+        "reasoning": 12517,
+        "cost": 0.39916559399999996,
+        "failed": 12,
+        "skipped": 0,
+        "cutoffs": 11,
+        "finishes": {
+          "stop": 41,
+          "length": 11,
+          "error": 2
+        },
+        "medianMs": 3276,
+        "p90Ms": 5653
+      }
+    },
+    "capped": false,
+    "halted": null,
+    "compare": [
+      {
+        "seed": 1,
+        "id": "a06",
+        "model": "claude-sonnet-5-5",
+        "job": "chemist",
+        "ai": {
+          "viewerHours": 1922,
+          "interactions": 42,
+          "moments": 12,
+          "rank": 9,
+          "failed": 0
+        },
+        "twin": {
+          "brain": "greedy",
+          "viewerHours": 2757,
+          "interactions": 19,
+          "moments": 6,
+          "rank": 8
+        }
+      },
+      {
+        "seed": 1,
+        "id": "a07",
+        "model": "claude-sonnet-5-5",
+        "job": "chemist",
+        "ai": {
+          "viewerHours": 3273,
+          "interactions": 36,
+          "moments": 6,
+          "rank": 4,
+          "failed": 0
+        },
+        "twin": {
+          "brain": "greedy",
+          "viewerHours": 5432,
+          "interactions": 49,
+          "moments": 32,
+          "rank": 2
+        }
+      },
+      {
+        "seed": 1,
+        "id": "a08",
+        "model": "claude-haiku-5-5",
+        "job": "dealer",
+        "ai": {
+          "viewerHours": 2875,
+          "interactions": 45,
+          "moments": 15,
+          "rank": 6,
+          "failed": 5
+        },
+        "twin": {
+          "brain": "greedy",
+          "viewerHours": 3482,
+          "interactions": 27,
+          "moments": 16,
+          "rank": 6
+        }
+      },
+      {
+        "seed": 1,
+        "id": "a09",
+        "model": "openai/gpt-6.1-sol",
+        "job": "dealer",
+        "ai": {
+          "viewerHours": 4866,
+          "interactions": 59,
+          "moments": 34,
+          "rank": 1,
+          "failed": 0
+        },
+        "twin": {
+          "brain": "greedy",
+          "viewerHours": 2759,
+          "interactions": 28,
+          "moments": 16,
+          "rank": 7
+        }
+      },
+      {
+        "seed": 1,
+        "id": "a10",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "job": "dealer",
+        "ai": {
+          "viewerHours": 4797,
+          "interactions": 72,
+          "moments": 34,
+          "rank": 2,
+          "failed": 12
+        },
+        "twin": {
+          "brain": "greedy",
+          "viewerHours": 3986,
+          "interactions": 14,
+          "moments": 23,
+          "rank": 4
+        }
+      }
+    ],
+    "twin": {
+      "meta": {
+        "run": "ai-s1 (bot twins)",
+        "lineup": "ai5",
+        "off": [],
+        "sets": [],
+        "configHash": "bf6545d6",
+        "mode": "ai",
+        "ai": "live (claude-sonnet-5-5 (claude, high), claude-sonnet-5-5 (claude, high), claude-haiku-5-5 (claude, xhigh), openai/gpt-6.1-sol (openrouter), moonshotai/kimi-k3.1-pro (openrouter))"
+      },
+      "seeds": [
+        1
+      ],
+      "seasons": 1,
+      "interacting": {
+        "interactionsPerAgentPerDay": 12.6,
+        "involvedShare": 0.47,
+        "uniquePairs": 35,
+        "possiblePairs": 45,
+        "everyoneMet4": 1,
+        "minPartners": 6,
+        "rivalries": 11,
+        "seasonsWith2Rivalries": 1,
+        "alliances": 5,
+        "kinds": {
+          "friendly": 31,
+          "hostile": 81,
+          "rival": 39,
+          "talk": 25,
+          "trade": 13
+        },
+        "messagesSent": 43,
+        "messagesAnswered": 15,
+        "promisesMade": 13,
+        "promisesKept": 3,
+        "promisesBroken": 10,
+        "tradesAgentAgent": 31,
+        "tradesBoughtFromNpc": 35,
+        "tradesSoldToNpc": 2
+      },
+      "interesting": {
+        "momentsPerSeason": 124,
+        "momentsByType": {
+          "arrest": 25,
+          "bank_job_fail": 4,
+          "bank_job_win": 2,
+          "bounty_collected": 2,
+          "bounty_posted": 3,
+          "bounty_revealed": 3,
+          "callout_answered": 9,
+          "callout_ducked": 8,
+          "comeback": 2,
+          "escape": 3,
+          "eviction": 4,
+          "king_attempt": 1,
+          "king_killed": 1,
+          "lead_change": 5,
+          "party": 2,
+          "promise_broken": 10,
+          "promise_kept": 3,
+          "revenge": 31,
+          "shooting": 6
+        },
+        "leadChanges": 5,
+        "seasonsWithBetrayalAnd2LeadChanges": 1,
+        "seasonsWithBetrayal": 1,
+        "seasonsWithKingAttempt": 1,
+        "topThirdRepeat": 0,
+        "turtle": null,
+        "winsByJob": {
+          "smuggler": 0,
+          "chemist": 0,
+          "dealer": 0,
+          "gunrunner": 1
+        },
+        "winsByBrain": {
+          "greedy": 0,
+          "hothead": 0,
+          "hustler": 0,
+          "saint": 0,
+          "showboat": 1,
+          "snake": 0
+        },
+        "actionMix": {
+          "move": 0.27,
+          "battle": 0.13,
+          "crip_walk": 0.09,
+          "buy": 0.08,
+          "call_out": 0.07,
+          "fistfight": 0.04,
+          "mug": 0.04,
+          "deal": 0.03,
+          "rest": 0.03,
+          "shoot": 0.03,
+          "steal_car": 0.02,
+          "lay_low": 0.02,
+          "shift": 0.02,
+          "cook": 0.02,
+          "crate": 0.02,
+          "bank_job": 0.01,
+          "pickpocket": 0.01,
+          "party": 0.01,
+          "build": 0.01,
+          "run": 0.01,
+          "scout": 0.01,
+          "run_cops": 0.01,
+          "bounty": 0.01,
+          "push_npc": 0.01,
+          "kill_king": 0,
+          "drive_by": 0
+        },
+        "topAction": {
+          "id": "move",
+          "share": 0.27
+        },
+        "copycatTopShare": 0.36,
+        "greedySimilarity": 0.84
+      },
+      "watch": {
+        "minutesWatched": 2093280,
+        "viewerHours": 34888,
+        "startPool": 1000,
+        "audienceEnd": 1316.86,
+        "audienceEndRatio": 1.32,
+        "seasonsGrowing": 1,
+        "curve": [
+          990,
+          984.11,
+          986.87,
+          990.71,
+          983.89,
+          996.24,
+          1006,
+          1007.31,
+          1023.07,
+          1034.44,
+          1045.33,
+          1049,
+          1048.16,
+          1052.94,
+          1079.4,
+          1079.18,
+          1087.79,
+          1104.8,
+          1118.27,
+          1120.66,
+          1113.61,
+          1134.68,
+          1145.51,
+          1142.61,
+          1137.08,
+          1139.24,
+          1148.79,
+          1146.31,
+          1147.9,
+          1160.88,
+          1158.31,
+          1161.12,
+          1160.23,
+          1159.03,
+          1154.2,
+          1165.1,
+          1162.85,
+          1195.1,
+          1212.99,
+          1211.86,
+          1202.31,
+          1206.04,
+          1199.53,
+          1199.37,
+          1217.88,
+          1221.57,
+          1243.05,
+          1239.68,
+          1248.57,
+          1236.61,
+          1264.78,
+          1289.27,
+          1295.35,
+          1316.86
+        ],
+        "watching": [
+          0,
+          50.12,
+          194.13,
+          308.97,
+          292.57,
+          465.37,
+          545.42,
+          531.32,
+          651.52,
+          699.59,
+          722.12,
+          681.74,
+          621.91,
+          631.13,
+          802.43,
+          723.04,
+          728.17,
+          804.81,
+          827.91,
+          766.34,
+          650.75,
+          784.51,
+          779.14,
+          675.91,
+          583.32,
+          595.15,
+          662.45,
+          624.8,
+          624.13,
+          719.23,
+          653.58,
+          645.91,
+          604.99,
+          585.34,
+          547.9,
+          649.26,
+          631.42,
+          874.14,
+          895.29,
+          776.38,
+          632.57,
+          639.78,
+          559.11,
+          561.76,
+          721.72,
+          684.37,
+          812.05,
+          694.79,
+          733.51,
+          614.5,
+          847.86,
+          955.05,
+          880.89,
+          938.31
+        ],
+        "longestDull": 3,
+        "longestDullMax": 3,
+        "seasonsDullAtMost3": 1,
+        "longestStrongDull": 3,
+        "longestStrongDullMax": 3,
+        "seasonsStrongDullAtMost3": 1,
+        "viewerHoursBySeat": [
+          {
+            "id": "a01",
+            "name": "Vex",
+            "brains": "hothead",
+            "viewerHours": 4323
+          },
+          {
+            "id": "a02",
+            "name": "Kim",
+            "brains": "hustler",
+            "viewerHours": 1519
+          },
+          {
+            "id": "a03",
+            "name": "Penny",
+            "brains": "showboat",
+            "viewerHours": 5614
+          },
+          {
+            "id": "a04",
+            "name": "Dutch",
+            "brains": "snake",
+            "viewerHours": 3962
+          },
+          {
+            "id": "a05",
+            "name": "Moss",
+            "brains": "saint",
+            "viewerHours": 1054
+          },
+          {
+            "id": "a06",
+            "name": "Juno",
+            "brains": "greedy",
+            "viewerHours": 2757
+          },
+          {
+            "id": "a07",
+            "name": "Rook",
+            "brains": "greedy",
+            "viewerHours": 5432
+          },
+          {
+            "id": "a08",
+            "name": "Tally",
+            "brains": "greedy",
+            "viewerHours": 3482
+          },
+          {
+            "id": "a09",
+            "name": "Sable",
+            "brains": "greedy",
+            "viewerHours": 2759
+          },
+          {
+            "id": "a10",
+            "name": "Wren",
+            "brains": "greedy",
+            "viewerHours": 3986
+          }
+        ],
+        "viewerHoursByBrain": {
+          "greedy": 3683,
+          "hothead": 4323,
+          "hustler": 1519,
+          "saint": 1054,
+          "showboat": 5614,
+          "snake": 3962
+        },
+        "viewerHoursByJob": {
+          "chemist": 4050,
+          "dealer": 3409,
+          "gunrunner": 3334,
+          "smuggler": 2921
+        }
+      },
+      "economy": {
+        "chemsSmuggled": 4,
+        "partsSmuggled": 6,
+        "productCooked": 21,
+        "productDealt": 36,
+        "dealCash": 900,
+        "gunsBuilt": 4,
+        "gunsSoldAgent": 1,
+        "gunsSoldNpc": 1,
+        "cashByDay": [
+          75.9,
+          76.5,
+          46.6
+        ],
+        "rentPaid": 14,
+        "evictions": 4,
+        "evictionsDay1": 2,
+        "rehoused": 1,
+        "nightThefts": 3,
+        "gearBought": {
+          "car": 6,
+          "gun": 7
+        },
+        "seasonsWithAGun": 1,
+        "arrests": 25,
+        "jailShare": 0.18,
+        "hospitalShare": 0.02,
+        "deaths": 1,
+        "boardPrices": {
+          "chems": 9,
+          "parts": 21.2,
+          "product": 16.14,
+          "guns": 114
+        }
+      },
+      "marks": [
+        {
+          "q": 1,
+          "mark": "At least 40% of acting hours involve another agent",
+          "value": "47%",
+          "pass": true
+        },
+        {
+          "q": 1,
+          "mark": "Every agent interacts with at least 4 others per season",
+          "value": "100% of seasons (mean fewest partners 6)",
+          "pass": true
+        },
+        {
+          "q": 1,
+          "mark": "At least 2 rivalries per season",
+          "value": "mean 11; 100% of seasons",
+          "pass": true
+        },
+        {
+          "q": 2,
+          "mark": "At least 1 broken promise per season, and a lead change in most seasons",
+          "value": "broken promise in 100% of seasons; lead change in 100% of seasons",
+          "pass": true
+        },
+        {
+          "q": 2,
+          "mark": "At least 1 king attempt in most seasons",
+          "value": "100% of seasons",
+          "pass": true
+        },
+        {
+          "q": 2,
+          "mark": "Top agent finishes top third again in 50-70% of seeds",
+          "value": "0%",
+          "pass": false
+        },
+        {
+          "q": 2,
+          "mark": "Turtle finishes in the bottom third in at least 80% of seeds",
+          "value": "no turtle in this lineup",
+          "pass": null
+        },
+        {
+          "q": 2,
+          "mark": "Each job wins between 0.5x and 1.5x its share of seats",
+          "value": "smuggler 0% (20%), chemist 0% (30%), dealer 0% (30%), gunrunner 100% (20%)",
+          "pass": false
+        },
+        {
+          "q": 2,
+          "mark": "Copycat: most common action takes 40% or less of acting hours (all-greedy lineup)",
+          "value": "top share per hour 36%; overall top action move 27%",
+          "pass": null
+        },
+        {
+          "q": 3,
+          "mark": "The audience ends the season at least as big as it started",
+          "value": "end/start 1.32x; 100% of seasons",
+          "pass": true
+        },
+        {
+          "q": 3,
+          "mark": "Longest dull stretch is 3 acting hours or less",
+          "value": "strong moments only: mean 3, worst 3, 100% of seasons; any moment: mean 3, worst 3",
+          "pass": true
+        }
+      ]
+    }
+  }
+}

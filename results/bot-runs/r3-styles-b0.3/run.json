@@ -1,0 +1,164 @@
+{
+  "command": "node run.mjs --bots --seeds 30 --lineup styles --set style.brand=0.3 --out out/r3-styles-b0.3 --quiet",
+  "mode": "bots",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "lineup": "styles",
+  "seats": [
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.9,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.9,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.1,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.1,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.9,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.9,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.1,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.1,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    },
+    {
+      "brain": "greedy",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    }
+  ],
+  "systems": {
+    "audienceTastes": true,
+    "audienceGrowth": true,
+    "boredom": true,
+    "novelty": true,
+    "callShot": true,
+    "revenge": true,
+    "kingslayer": true,
+    "steals": true,
+    "attentionEnergy": true,
+    "dealtHands": true,
+    "cops": true,
+    "getaway": true,
+    "heatDecay": true,
+    "rent": true,
+    "nightThieves": true,
+    "crate": true,
+    "bounties": true,
+    "callOuts": true,
+    "promises": true,
+    "messages": true,
+    "board": true,
+    "parties": true,
+    "flash": true,
+    "king": true,
+    "style": true,
+    "battles": true,
+    "mugging": true,
+    "carTheft": true,
+    "bankJob": true,
+    "shooting": true,
+    "fistfights": true,
+    "leaderKing": true,
+    "smoothAudience": true,
+    "duckWalkAway": true
+  },
+  "off": [],
+  "sets": [
+    "style.brand=0.3"
+  ],
+  "configHash": "7f845266",
+  "gitCommit": "5de3b730214c13a27e4fc6850fc3ac6c05c56383",
+  "startedAt": "2026-11-08T15:41:27.886Z",
+  "finishedAt": "2026-11-08T15:41:31.160Z",
+  "ms": 3274
+}

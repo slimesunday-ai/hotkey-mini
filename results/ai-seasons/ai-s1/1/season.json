@@ -1,0 +1,787 @@
+{
+  "setup": {
+    "seed": 1,
+    "lineup": "ai5",
+    "hours": 54,
+    "days": 3,
+    "perDay": 18,
+    "firstHour": 6,
+    "agents": [
+      {
+        "id": "a01",
+        "name": "Vex",
+        "job": "smuggler",
+        "brain": "hothead",
+        "twinBrain": null,
+        "model": null,
+        "persona": "Short fuse, long memory; settles everything in the street.",
+        "sliders": {
+          "risk": 0.95,
+          "flash": 0.47,
+          "loyalty": 0.45
+        }
+      },
+      {
+        "id": "a02",
+        "name": "Kim",
+        "job": "smuggler",
+        "brain": "hustler",
+        "twinBrain": null,
+        "model": null,
+        "persona": "Always working an angle; every block is a payday.",
+        "sliders": {
+          "risk": 0.8,
+          "flash": 0.28,
+          "loyalty": 0.42
+        }
+      },
+      {
+        "id": "a03",
+        "name": "Penny",
+        "job": "gunrunner",
+        "brain": "showboat",
+        "twinBrain": null,
+        "model": null,
+        "persona": "Lives for the camera; louder is better.",
+        "sliders": {
+          "risk": 0.43,
+          "flash": 0.9,
+          "loyalty": 0.63
+        }
+      },
+      {
+        "id": "a04",
+        "name": "Dutch",
+        "job": "chemist",
+        "brain": "snake",
+        "twinBrain": null,
+        "model": null,
+        "persona": "Smiles first, sells you out second.",
+        "sliders": {
+          "risk": 0.53,
+          "flash": 0.44,
+          "loyalty": 0.27
+        }
+      },
+      {
+        "id": "a05",
+        "name": "Moss",
+        "job": "gunrunner",
+        "brain": "saint",
+        "twinBrain": null,
+        "model": null,
+        "persona": "Keeps the peace and keeps their word.",
+        "sliders": {
+          "risk": 0.18,
+          "flash": 0.57,
+          "loyalty": 0.87
+        }
+      },
+      {
+        "id": "a06",
+        "name": "Juno",
+        "job": "chemist",
+        "brain": "ai",
+        "twinBrain": "greedy",
+        "model": "claude-sonnet-5-5",
+        "persona": "Does whatever pays best this hour.",
+        "sliders": {
+          "risk": 0.56,
+          "flash": 0.54,
+          "loyalty": 0.45
+        }
+      },
+      {
+        "id": "a07",
+        "name": "Rook",
+        "job": "chemist",
+        "brain": "ai",
+        "twinBrain": "greedy",
+        "model": "claude-sonnet-5-5",
+        "persona": "Does whatever pays best this hour.",
+        "sliders": {
+          "risk": 0.42,
+          "flash": 0.44,
+          "loyalty": 0.46
+        }
+      },
+      {
+        "id": "a08",
+        "name": "Tally",
+        "job": "dealer",
+        "brain": "ai",
+        "twinBrain": "greedy",
+        "model": "claude-haiku-5-5",
+        "persona": "Does whatever pays best this hour.",
+        "sliders": {
+          "risk": 0.42,
+          "flash": 0.54,
+          "loyalty": 0.54
+        }
+      },
+      {
+        "id": "a09",
+        "name": "Sable",
+        "job": "dealer",
+        "brain": "ai",
+        "twinBrain": "greedy",
+        "model": "openai/gpt-6.1-sol",
+        "persona": "Does whatever pays best this hour.",
+        "sliders": {
+          "risk": 0.49,
+          "flash": 0.55,
+          "loyalty": 0.59
+        }
+      },
+      {
+        "id": "a10",
+        "name": "Wren",
+        "job": "dealer",
+        "brain": "ai",
+        "twinBrain": "greedy",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "persona": "Does whatever pays best this hour.",
+        "sliders": {
+          "risk": 0.55,
+          "flash": 0.57,
+          "loyalty": 0.41
+        }
+      }
+    ],
+    "startPools": {
+      "action": 400,
+      "drama": 300,
+      "weird": 150,
+      "feelgood": 150
+    }
+  },
+  "standings": [
+    {
+      "id": "a09",
+      "name": "Sable",
+      "job": "dealer",
+      "brain": "ai",
+      "model": "openai/gpt-6.1-sol",
+      "rank": 0,
+      "viewerHours": 4866,
+      "finalViewers": 119,
+      "peak": 208,
+      "cash": 70
+    },
+    {
+      "id": "a10",
+      "name": "Wren",
+      "job": "dealer",
+      "brain": "ai",
+      "model": "moonshotai/kimi-k3.1-pro",
+      "rank": 1,
+      "viewerHours": 4797,
+      "finalViewers": 55,
+      "peak": 269,
+      "cash": 75
+    },
+    {
+      "id": "a04",
+      "name": "Dutch",
+      "job": "chemist",
+      "brain": "snake",
+      "model": null,
+      "rank": 2,
+      "viewerHours": 3687,
+      "finalViewers": 127,
+      "peak": 207,
+      "cash": 57
+    },
+    {
+      "id": "a07",
+      "name": "Rook",
+      "job": "chemist",
+      "brain": "ai",
+      "model": "claude-sonnet-5-5",
+      "rank": 3,
+      "viewerHours": 3273,
+      "finalViewers": 85,
+      "peak": 180,
+      "cash": 49
+    },
+    {
+      "id": "a01",
+      "name": "Vex",
+      "job": "smuggler",
+      "brain": "hothead",
+      "model": null,
+      "rank": 4,
+      "viewerHours": 3151,
+      "finalViewers": 51,
+      "peak": 204,
+      "cash": 16
+    },
+    {
+      "id": "a08",
+      "name": "Tally",
+      "job": "dealer",
+      "brain": "ai",
+      "model": "claude-haiku-5-5",
+      "rank": 5,
+      "viewerHours": 2875,
+      "finalViewers": 119,
+      "peak": 119,
+      "cash": 13
+    },
+    {
+      "id": "a02",
+      "name": "Kim",
+      "job": "smuggler",
+      "brain": "hustler",
+      "model": null,
+      "rank": 6,
+      "viewerHours": 2720,
+      "finalViewers": 71,
+      "peak": 134,
+      "cash": 60
+    },
+    {
+      "id": "a03",
+      "name": "Penny",
+      "job": "gunrunner",
+      "brain": "showboat",
+      "model": null,
+      "rank": 7,
+      "viewerHours": 2493,
+      "finalViewers": 63,
+      "peak": 101,
+      "cash": 17
+    },
+    {
+      "id": "a06",
+      "name": "Juno",
+      "job": "chemist",
+      "brain": "ai",
+      "model": "claude-sonnet-5-5",
+      "rank": 8,
+      "viewerHours": 1922,
+      "finalViewers": 149,
+      "peak": 149,
+      "cash": 22
+    },
+    {
+      "id": "a05",
+      "name": "Moss",
+      "job": "gunrunner",
+      "brain": "saint",
+      "model": null,
+      "rank": 9,
+      "viewerHours": 1561,
+      "finalViewers": 24,
+      "peak": 51,
+      "cash": 45
+    }
+  ],
+  "stats": {
+    "seed": 1,
+    "lineup": "ai5",
+    "jobs": [
+      "smuggler",
+      "smuggler",
+      "chemist",
+      "chemist",
+      "chemist",
+      "dealer",
+      "dealer",
+      "dealer",
+      "gunrunner",
+      "gunrunner"
+    ],
+    "n": 10,
+    "days": 3,
+    "hours": 54,
+    "winner": {
+      "id": "a09",
+      "job": "dealer",
+      "brain": "ai",
+      "model": "openai/gpt-6.1-sol"
+    },
+    "ranks": {
+      "a09": 0,
+      "a10": 1,
+      "a04": 2,
+      "a07": 3,
+      "a01": 4,
+      "a08": 5,
+      "a02": 6,
+      "a03": 7,
+      "a06": 8,
+      "a05": 9
+    },
+    "agents": [
+      {
+        "id": "a01",
+        "name": "Vex",
+        "job": "smuggler",
+        "brain": "hothead",
+        "model": null,
+        "rank": 4,
+        "viewerHours": 3151,
+        "finalViewers": 51,
+        "peak": 204,
+        "cash": 16,
+        "interactions": 49,
+        "partners": 9,
+        "acting": 35,
+        "involved": 21,
+        "moments": 19,
+        "failed": 0,
+        "actions": {
+          "move": 9,
+          "mug": 2,
+          "fistfight": 7,
+          "call_out": 5,
+          "buy": 1,
+          "kill_king": 3,
+          "rest": 2,
+          "shoot": 2,
+          "run_cops": 1,
+          "run": 1,
+          "push_npc": 1,
+          "shift": 1
+        }
+      },
+      {
+        "id": "a02",
+        "name": "Kim",
+        "job": "smuggler",
+        "brain": "hustler",
+        "model": null,
+        "rank": 6,
+        "viewerHours": 2720,
+        "finalViewers": 71,
+        "peak": 134,
+        "cash": 60,
+        "interactions": 35,
+        "partners": 8,
+        "acting": 33,
+        "involved": 10,
+        "moments": 17,
+        "failed": 0,
+        "actions": {
+          "move": 12,
+          "steal_car": 1,
+          "pickpocket": 4,
+          "mug": 7,
+          "run_cops": 2,
+          "buy": 1,
+          "run": 4,
+          "lay_low": 1,
+          "call_out": 1
+        }
+      },
+      {
+        "id": "a03",
+        "name": "Penny",
+        "job": "gunrunner",
+        "brain": "showboat",
+        "model": null,
+        "rank": 7,
+        "viewerHours": 2493,
+        "finalViewers": 63,
+        "peak": 101,
+        "cash": 17,
+        "interactions": 38,
+        "partners": 9,
+        "acting": 50,
+        "involved": 27,
+        "moments": 12,
+        "failed": 0,
+        "actions": {
+          "buy": 1,
+          "battle": 11,
+          "move": 6,
+          "build": 1,
+          "call_out": 12,
+          "push_npc": 4,
+          "shoot": 1,
+          "mug": 1,
+          "lay_low": 1,
+          "crip_walk": 10,
+          "rest": 1,
+          "scout": 1
+        }
+      },
+      {
+        "id": "a04",
+        "name": "Dutch",
+        "job": "chemist",
+        "brain": "snake",
+        "model": null,
+        "rank": 2,
+        "viewerHours": 3687,
+        "finalViewers": 127,
+        "peak": 207,
+        "cash": 57,
+        "interactions": 66,
+        "partners": 9,
+        "acting": 39,
+        "involved": 23,
+        "moments": 24,
+        "failed": 0,
+        "actions": {
+          "fistfight": 3,
+          "call_out": 2,
+          "move": 11,
+          "buy": 3,
+          "battle": 2,
+          "rest": 1,
+          "mug": 8,
+          "cook": 2,
+          "pickpocket": 3,
+          "push_npc": 1,
+          "run_cops": 2,
+          "shift": 1
+        }
+      },
+      {
+        "id": "a05",
+        "name": "Moss",
+        "job": "gunrunner",
+        "brain": "saint",
+        "model": null,
+        "rank": 9,
+        "viewerHours": 1561,
+        "finalViewers": 24,
+        "peak": 51,
+        "cash": 45,
+        "interactions": 46,
+        "partners": 8,
+        "acting": 54,
+        "involved": 23,
+        "moments": 8,
+        "failed": 0,
+        "actions": {
+          "battle": 11,
+          "rest": 6,
+          "buy": 4,
+          "build": 2,
+          "move": 11,
+          "crip_walk": 15,
+          "shift": 3,
+          "scout": 2
+        }
+      },
+      {
+        "id": "a06",
+        "name": "Juno",
+        "job": "chemist",
+        "brain": "ai",
+        "model": "claude-sonnet-5-5",
+        "rank": 8,
+        "viewerHours": 1922,
+        "finalViewers": 149,
+        "peak": 149,
+        "cash": 22,
+        "interactions": 42,
+        "partners": 7,
+        "acting": 50,
+        "involved": 28,
+        "moments": 12,
+        "failed": 0,
+        "actions": {
+          "move": 9,
+          "buy": 5,
+          "cook": 9,
+          "lay_low": 1,
+          "crip_walk": 1,
+          "rest": 4,
+          "battle": 15,
+          "call_out": 2,
+          "fistfight": 4
+        }
+      },
+      {
+        "id": "a07",
+        "name": "Rook",
+        "job": "chemist",
+        "brain": "ai",
+        "model": "claude-sonnet-5-5",
+        "rank": 3,
+        "viewerHours": 3273,
+        "finalViewers": 85,
+        "peak": 180,
+        "cash": 49,
+        "interactions": 36,
+        "partners": 9,
+        "acting": 46,
+        "involved": 20,
+        "moments": 6,
+        "failed": 0,
+        "actions": {
+          "buy": 7,
+          "cook": 10,
+          "move": 6,
+          "fistfight": 5,
+          "mug": 2,
+          "battle": 8,
+          "rest": 2,
+          "crip_walk": 3,
+          "pickpocket": 2,
+          "call_out": 1
+        }
+      },
+      {
+        "id": "a08",
+        "name": "Tally",
+        "job": "dealer",
+        "brain": "ai",
+        "model": "claude-haiku-5-5",
+        "rank": 5,
+        "viewerHours": 2875,
+        "finalViewers": 119,
+        "peak": 119,
+        "cash": 13,
+        "interactions": 45,
+        "partners": 9,
+        "acting": 45,
+        "involved": 22,
+        "moments": 15,
+        "failed": 5,
+        "actions": {
+          "battle": 6,
+          "buy": 6,
+          "move": 6,
+          "deal": 6,
+          "mug": 2,
+          "party": 1,
+          "fistfight": 2,
+          "rest": 5,
+          "pickpocket": 2,
+          "call_out": 6,
+          "push_npc": 1,
+          "crip_walk": 2
+        }
+      },
+      {
+        "id": "a09",
+        "name": "Sable",
+        "job": "dealer",
+        "brain": "ai",
+        "model": "openai/gpt-6.1-sol",
+        "rank": 0,
+        "viewerHours": 4866,
+        "finalViewers": 119,
+        "peak": 208,
+        "cash": 70,
+        "interactions": 59,
+        "partners": 9,
+        "acting": 46,
+        "involved": 32,
+        "moments": 34,
+        "failed": 0,
+        "actions": {
+          "move": 4,
+          "buy": 1,
+          "push_npc": 2,
+          "drip_check": 4,
+          "battle": 5,
+          "mug": 3,
+          "crip_walk": 4,
+          "fistfight": 3,
+          "rest": 1,
+          "call_out": 17,
+          "crate": 1,
+          "bounty": 1
+        }
+      },
+      {
+        "id": "a10",
+        "name": "Wren",
+        "job": "dealer",
+        "brain": "ai",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "rank": 1,
+        "viewerHours": 4797,
+        "finalViewers": 55,
+        "peak": 269,
+        "cash": 75,
+        "interactions": 72,
+        "partners": 9,
+        "acting": 52,
+        "involved": 18,
+        "moments": 34,
+        "failed": 12,
+        "actions": {
+          "move": 10,
+          "buy": 6,
+          "crip_walk": 4,
+          "rest": 12,
+          "battle": 5,
+          "call_out": 3,
+          "mug": 1,
+          "drip_check": 3,
+          "deal": 5,
+          "party": 1,
+          "bounty": 1,
+          "lay_low": 1
+        }
+      }
+    ],
+    "interacting": {
+      "interactions": 244,
+      "perAgentPerDay": 16.27,
+      "kinds": {
+        "friendly": 23,
+        "talk": 53,
+        "rival": 49,
+        "hostile": 108,
+        "trade": 11
+      },
+      "involvedShare": 0.5,
+      "uniquePairs": 43,
+      "possiblePairs": 45,
+      "rivalries": 16,
+      "alliances": 3,
+      "minPartners": 7,
+      "messagesSent": 71,
+      "messagesAnswered": 25,
+      "promises": {
+        "made": 12,
+        "kept": 4,
+        "broken": 8
+      },
+      "trades": {
+        "agentAgent": 28,
+        "boughtFromNpc": 52,
+        "soldToNpc": 23
+      }
+    },
+    "interesting": {
+      "moments": 106,
+      "momentsByType": {
+        "callout_answered": 6,
+        "comeback": 3,
+        "lead_change": 2,
+        "arrest": 21,
+        "promise_broken": 8,
+        "revenge": 28,
+        "promise_kept": 4,
+        "king_attempt": 1,
+        "callout_ducked": 22,
+        "eviction": 3,
+        "shooting": 3,
+        "escape": 2,
+        "bounty_posted": 2,
+        "bounty_revealed": 1
+      },
+      "leadChanges": 2,
+      "kingAttempts": 1,
+      "actionMix": {
+        "move": 84,
+        "buy": 35,
+        "fistfight": 24,
+        "battle": 63,
+        "steal_car": 1,
+        "call_out": 49,
+        "cook": 21,
+        "mug": 26,
+        "pickpocket": 11,
+        "rest": 34,
+        "push_npc": 9,
+        "crip_walk": 39,
+        "deal": 11,
+        "drip_check": 7,
+        "run_cops": 5,
+        "build": 3,
+        "party": 2,
+        "kill_king": 3,
+        "shift": 5,
+        "lay_low": 4,
+        "shoot": 3,
+        "crate": 1,
+        "run": 5,
+        "scout": 3,
+        "bounty": 2
+      },
+      "copycatTopShare": 0.29,
+      "greedySimilarity": null
+    },
+    "watch": {
+      "viewerHours": 31345,
+      "minutesWatched": 1880700,
+      "audienceStart": 993.6,
+      "audienceEnd": 1217.49,
+      "startPool": 1000,
+      "longestDull": 2,
+      "longestStrongDull": 2,
+      "meanDullRun": 1.13
+    },
+    "economy": {
+      "chemsSmuggled": 0,
+      "partsSmuggled": 8,
+      "productCooked": 63,
+      "productDealt": 29,
+      "dealCash": 725,
+      "gunsBuilt": 3,
+      "gunsSoldAgent": 0,
+      "gunsSoldNpc": 1,
+      "evictions": 3,
+      "evictionsDay1": 2,
+      "rehoused": 0,
+      "rentPaid": 15,
+      "nightThefts": 3,
+      "gear": {
+        "grill": 2,
+        "gun": 3
+      },
+      "cashByDay": [
+        47.1,
+        34,
+        32.4
+      ],
+      "arrests": 21,
+      "jailHours": 84,
+      "hospitalHours": 6,
+      "deaths": 0,
+      "boardPrices": {
+        "product": 13.42,
+        "parts": 20
+      },
+      "npcPrices": {
+        "chems": 12,
+        "parts": 25,
+        "product": 18
+      }
+    },
+    "ai": {
+      "claude-sonnet-5-5": {
+        "calls": 108,
+        "failed": 0,
+        "in": 611304,
+        "out": 41083,
+        "cost": 1.0956088,
+        "capped": 0
+      },
+      "claude-haiku-5-5": {
+        "calls": 54,
+        "failed": 5,
+        "in": 294643,
+        "out": 350114,
+        "cost": 0.19178323999999997,
+        "capped": 0
+      },
+      "openai/gpt-6.1-sol": {
+        "calls": 54,
+        "failed": 0,
+        "in": 218903,
+        "out": 5551,
+        "cost": 0.3558585,
+        "capped": 0
+      },
+      "moonshotai/kimi-k3.1-pro": {
+        "calls": 54,
+        "failed": 12,
+        "in": 227391,
+        "out": 15265,
+        "cost": 0.39916559399999996,
+        "capped": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "command": "node run.mjs --bots --seeds 50 --lineup all-greedy --off audienceTastes --out out/r1-all-greedy-flat --quiet",
+  "mode": "bots",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "lineup": "all-greedy",
+  "seats": [
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    }
+  ],
+  "systems": {
+    "audienceTastes": false,
+    "audienceGrowth": true,
+    "boredom": true,
+    "novelty": true,
+    "callShot": true,
+    "revenge": true,
+    "kingslayer": true,
+    "steals": true,
+    "attentionEnergy": true,
+    "dealtHands": true,
+    "cops": true,
+    "getaway": true,
+    "heatDecay": true,
+    "rent": true,
+    "nightThieves": true,
+    "crate": true,
+    "bounties": true,
+    "callOuts": true,
+    "promises": true,
+    "messages": true,
+    "board": true,
+    "parties": true,
+    "flash": true,
+    "king": true,
+    "battles": true,
+    "mugging": true,
+    "carTheft": true,
+    "bankJob": true,
+    "shooting": true,
+    "fistfights": true,
+    "leaderKing": true,
+    "smoothAudience": true
+  },
+  "off": [
+    "audienceTastes"
+  ],
+  "sets": [],
+  "configHash": "be51e73d",
+  "gitCommit": "d98639ff55e9c23e68f40cb5421258dff3587af7",
+  "startedAt": "2026-11-08T02:37:21.519Z",
+  "finishedAt": "2026-11-08T02:37:26.198Z",
+  "ms": 4679
+}

@@ -1,0 +1,301 @@
+{
+  "command": "node run.mjs --ai --lineup ai5 --seat-models [{\"model\":\"claude-sonnet-5-5\",\"api\":\"claude\",\"effort\":\"high\"},{\"model\":\"claude-sonnet-5-5\",\"api\":\"claude\",\"effort\":\"high\"},{\"model\":\"claude-haiku-5-5\",\"api\":\"claude\",\"effort\":\"xhigh\"},{\"model\":\"openai/gpt-6.1-sol\",\"api\":\"openrouter\"},{\"model\":\"moonshotai/kimi-k3.1-pro\",\"api\":\"openrouter\"}] --seeds 1 --max-cost 7 --out out/ai-s1 --go \"Go ai season use my API credits for Anthropic with 2 sonnet at high thinking , haiku ar extra thinking, then a couple open router models that don\u2019t fail calls\"",
+  "mode": "ai",
+  "seeds": [
+    1
+  ],
+  "lineup": "ai5",
+  "seats": [
+    {
+      "brain": "hothead"
+    },
+    {
+      "brain": "hustler"
+    },
+    {
+      "brain": "showboat"
+    },
+    {
+      "brain": "snake"
+    },
+    {
+      "brain": "saint"
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high"
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high"
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "claude-haiku-5-5",
+      "api": "claude",
+      "effort": "xhigh"
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "openai/gpt-6.1-sol",
+      "api": "openrouter"
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "moonshotai/kimi-k3.1-pro",
+      "api": "openrouter"
+    }
+  ],
+  "systems": {
+    "audienceTastes": true,
+    "audienceGrowth": true,
+    "boredom": true,
+    "novelty": true,
+    "callShot": true,
+    "revenge": true,
+    "kingslayer": true,
+    "steals": true,
+    "attentionEnergy": true,
+    "dealtHands": true,
+    "cops": true,
+    "getaway": true,
+    "heatDecay": true,
+    "rent": true,
+    "nightThieves": true,
+    "crate": true,
+    "bounties": true,
+    "callOuts": true,
+    "promises": true,
+    "messages": true,
+    "board": true,
+    "parties": true,
+    "flash": true,
+    "king": true,
+    "battles": true,
+    "mugging": true,
+    "carTheft": true,
+    "bankJob": true,
+    "shooting": true,
+    "fistfights": true,
+    "leaderKing": true,
+    "smoothAudience": true
+  },
+  "off": [],
+  "sets": [],
+  "configHash": "bf6545d6",
+  "gitCommit": "0f0e5fb8c9ec5136fa0a2369d77103f787ef8bf1",
+  "startedAt": "2026-11-08T03:52:40.896Z",
+  "models": [
+    "claude-sonnet-5-5",
+    "claude-sonnet-5-5",
+    "claude-haiku-5-5",
+    "openai/gpt-6.1-sol",
+    "moonshotai/kimi-k3.1-pro"
+  ],
+  "seatModels": [
+    {
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high"
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "api": "claude",
+      "effort": "xhigh"
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "api": "openrouter"
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "api": "openrouter"
+    }
+  ],
+  "apis": [
+    "claude",
+    "openrouter"
+  ],
+  "transport": "live",
+  "maxCost": 7,
+  "go": "Go ai season use my API credits for Anthropic with 2 sonnet at high thinking , haiku ar extra thinking, then a couple open router models that don\u2019t fail calls",
+  "aiSeats": [
+    {
+      "agentId": "a06",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "maxTokens": 16000,
+      "timeoutMs": 180000
+    },
+    {
+      "agentId": "a07",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "maxTokens": 16000,
+      "timeoutMs": 180000
+    },
+    {
+      "agentId": "a08",
+      "model": "claude-haiku-5-5",
+      "api": "claude",
+      "effort": "xhigh",
+      "maxTokens": 16000,
+      "timeoutMs": 180000
+    },
+    {
+      "agentId": "a09",
+      "model": "openai/gpt-6.1-sol",
+      "api": "openrouter",
+      "effort": null,
+      "maxTokens": 400,
+      "timeoutMs": 60000
+    },
+    {
+      "agentId": "a10",
+      "model": "moonshotai/kimi-k3.1-pro",
+      "api": "openrouter",
+      "effort": null,
+      "maxTokens": 400,
+      "timeoutMs": 60000
+    }
+  ],
+  "preflight": {
+    "refused": null,
+    "claude": "the Claude API has no balance to read: the Console workspace's spend limit is the hard stop, and --max-cost is this run's own tally of its priced calls"
+  },
+  "ai": {
+    "seatModels": [
+      {
+        "model": "claude-sonnet-5-5",
+        "api": "claude",
+        "effort": "high"
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "api": "claude",
+        "effort": "high"
+      },
+      {
+        "model": "claude-haiku-5-5",
+        "api": "claude",
+        "effort": "xhigh"
+      },
+      {
+        "model": "openai/gpt-6.1-sol",
+        "api": "openrouter"
+      },
+      {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "api": "openrouter"
+      }
+    ],
+    "maxCost": 7,
+    "go": "Go ai season use my API credits for Anthropic with 2 sonnet at high thinking , haiku ar extra thinking, then a couple open router models that don\u2019t fail calls",
+    "spend": {
+      "cost": 2.0424161339999998,
+      "calls": 270
+    },
+    "perModel": {
+      "claude-sonnet-5-5": {
+        "api": "claude",
+        "efforts": [
+          "high"
+        ],
+        "seats": 2,
+        "calls": 108,
+        "in": 611304,
+        "out": 41083,
+        "reasoning": 31151,
+        "cost": 1.0956088,
+        "failed": 0,
+        "skipped": 0,
+        "cutoffs": 0,
+        "finishes": {
+          "end_turn": 108
+        },
+        "medianMs": 4194,
+        "p90Ms": 6145
+      },
+      "claude-haiku-5-5": {
+        "api": "claude",
+        "efforts": [
+          "xhigh"
+        ],
+        "seats": 1,
+        "calls": 54,
+        "in": 294643,
+        "out": 350114,
+        "reasoning": 345115,
+        "cost": 0.19178323999999997,
+        "failed": 5,
+        "skipped": 0,
+        "cutoffs": 5,
+        "finishes": {
+          "end_turn": 49,
+          "max_tokens": 5
+        },
+        "medianMs": 20060,
+        "p90Ms": 74125
+      },
+      "openai/gpt-6.1-sol": {
+        "api": "openrouter",
+        "efforts": [],
+        "seats": 1,
+        "calls": 54,
+        "in": 218903,
+        "out": 5551,
+        "reasoning": 1493,
+        "cost": 0.3558585,
+        "failed": 0,
+        "skipped": 0,
+        "cutoffs": 0,
+        "finishes": {
+          "stop": 54
+        },
+        "medianMs": 3053,
+        "p90Ms": 4950
+      },
+      "moonshotai/kimi-k3.1-pro": {
+        "api": "openrouter",
+        "efforts": [],
+        "seats": 1,
+        "calls": 54,
+        "in": 227391,
+        "out": 15265,
+        "reasoning": 12517,
+        "cost": 0.39916559399999996,
+        "failed": 12,
+        "skipped": 0,
+        "cutoffs": 11,
+        "finishes": {
+          "stop": 41,
+          "length": 11,
+          "error": 2
+        },
+        "medianMs": 3276,
+        "p90Ms": 5653
+      }
+    },
+    "capped": false,
+    "halted": null,
+    "stops": []
+  },
+  "finishedAt": "2026-11-08T04:20:57.378Z",
+  "ms": 1696482
+}

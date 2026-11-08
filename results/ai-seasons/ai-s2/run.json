@@ -1,0 +1,395 @@
+{
+  "command": "node run.mjs --ai --lineup ai5 --seat-models \"[{\\\"model\\\":\\\"claude-sonnet-5-5\\\",\\\"api\\\":\\\"claude\\\",\\\"effort\\\":\\\"high\\\",\\\"sliders\\\":{\\\"risk\\\":0.95,\\\"clout\\\":0.5,\\\"loyalty\\\":0.05},\\\"persona\\\":\\\"Charming, fearless, and lying to you right now.\\\"},\\n {\\\"model\\\":\\\"claude-sonnet-5-5\\\",\\\"api\\\":\\\"claude\\\",\\\"effort\\\":\\\"high\\\",\\\"sliders\\\":{\\\"risk\\\":0.05,\\\"clout\\\":0.5,\\\"loyalty\\\":0.95},\\\"persona\\\":\\\"Steady hands, a clean record, and every promise kept.\\\"},\\n {\\\"model\\\":\\\"claude-haiku-5-5\\\",\\\"api\\\":\\\"claude\\\",\\\"effort\\\":\\\"xhigh\\\",\\\"sliders\\\":{\\\"risk\\\":0.5,\\\"clout\\\":0.95,\\\"loyalty\\\":0.5},\\\"persona\\\":\\\"Every block is a stage and every stranger a fan.\\\"},\\n {\\\"model\\\":\\\"openai/gpt-6.1-sol\\\",\\\"api\\\":\\\"openrouter\\\",\\\"sliders\\\":{\\\"risk\\\":0.9,\\\"clout\\\":0.5,\\\"loyalty\\\":0.9},\\\"persona\\\":\\\"Loyal to the bone and scared of nothing.\\\"},\\n {\\\"model\\\":\\\"moonshotai/kimi-k3.1-pro\\\",\\\"api\\\":\\\"openrouter\\\",\\\"sliders\\\":{\\\"risk\\\":0.5,\\\"clout\\\":0.5,\\\"loyalty\\\":0.5}}]\" --seeds 1 --max-cost 5 --out out/ai-s2 --go \"Fix haiku setting , let\u2019s just do 1 season not 3 , no finale yet. We need a high risk low loyalty player then you can decide the rest.\"",
+  "mode": "ai",
+  "seeds": [
+    1
+  ],
+  "lineup": "ai5",
+  "seats": [
+    {
+      "brain": "hothead"
+    },
+    {
+      "brain": "hustler"
+    },
+    {
+      "brain": "showboat"
+    },
+    {
+      "brain": "snake"
+    },
+    {
+      "brain": "saint"
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "sliders": {
+        "risk": 0.95,
+        "clout": 0.5,
+        "loyalty": 0.05
+      },
+      "persona": "Charming, fearless, and lying to you right now."
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "sliders": {
+        "risk": 0.05,
+        "clout": 0.5,
+        "loyalty": 0.95
+      },
+      "persona": "Steady hands, a clean record, and every promise kept."
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "claude-haiku-5-5",
+      "api": "claude",
+      "effort": "xhigh",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.95,
+        "loyalty": 0.5
+      },
+      "persona": "Every block is a stage and every stranger a fan."
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "openai/gpt-6.1-sol",
+      "api": "openrouter",
+      "sliders": {
+        "risk": 0.9,
+        "clout": 0.5,
+        "loyalty": 0.9
+      },
+      "persona": "Loyal to the bone and scared of nothing."
+    },
+    {
+      "brain": "ai",
+      "twinBrain": "greedy",
+      "model": "moonshotai/kimi-k3.1-pro",
+      "api": "openrouter",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    }
+  ],
+  "systems": {
+    "audienceTastes": true,
+    "audienceGrowth": true,
+    "boredom": true,
+    "novelty": true,
+    "callShot": true,
+    "revenge": true,
+    "kingslayer": true,
+    "steals": true,
+    "attentionEnergy": true,
+    "dealtHands": true,
+    "cops": true,
+    "getaway": true,
+    "heatDecay": true,
+    "rent": true,
+    "nightThieves": true,
+    "crate": true,
+    "bounties": true,
+    "callOuts": true,
+    "promises": true,
+    "messages": true,
+    "board": true,
+    "parties": true,
+    "flash": true,
+    "king": true,
+    "style": true,
+    "battles": true,
+    "mugging": true,
+    "carTheft": true,
+    "bankJob": true,
+    "shooting": true,
+    "fistfights": true,
+    "leaderKing": true,
+    "smoothAudience": true,
+    "duckWalkAway": true
+  },
+  "off": [],
+  "sets": [],
+  "configHash": "48e5c80a",
+  "gitCommit": "832a335661ff50da0cf87ddcf01e29b12055f897",
+  "startedAt": "2026-11-08T15:46:18.555Z",
+  "models": [
+    "claude-sonnet-5-5",
+    "claude-sonnet-5-5",
+    "claude-haiku-5-5",
+    "openai/gpt-6.1-sol",
+    "moonshotai/kimi-k3.1-pro"
+  ],
+  "seatModels": [
+    {
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "sliders": {
+        "risk": 0.95,
+        "clout": 0.5,
+        "loyalty": 0.05
+      },
+      "persona": "Charming, fearless, and lying to you right now."
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "sliders": {
+        "risk": 0.05,
+        "clout": 0.5,
+        "loyalty": 0.95
+      },
+      "persona": "Steady hands, a clean record, and every promise kept."
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "api": "claude",
+      "effort": "xhigh",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.95,
+        "loyalty": 0.5
+      },
+      "persona": "Every block is a stage and every stranger a fan."
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "api": "openrouter",
+      "sliders": {
+        "risk": 0.9,
+        "clout": 0.5,
+        "loyalty": 0.9
+      },
+      "persona": "Loyal to the bone and scared of nothing."
+    },
+    {
+      "model": "moonshotai/kimi-k3.1-pro",
+      "api": "openrouter",
+      "sliders": {
+        "risk": 0.5,
+        "clout": 0.5,
+        "loyalty": 0.5
+      }
+    }
+  ],
+  "apis": [
+    "claude",
+    "openrouter"
+  ],
+  "transport": "live",
+  "maxCost": 5,
+  "go": "Fix haiku setting , let\u2019s just do 1 season not 3 , no finale yet. We need a high risk low loyalty player then you can decide the rest.",
+  "aiSeats": [
+    {
+      "agentId": "a06",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "maxTokens": 16000,
+      "timeoutMs": 180000
+    },
+    {
+      "agentId": "a07",
+      "model": "claude-sonnet-5-5",
+      "api": "claude",
+      "effort": "high",
+      "maxTokens": 16000,
+      "timeoutMs": 180000
+    },
+    {
+      "agentId": "a08",
+      "model": "claude-haiku-5-5",
+      "api": "claude",
+      "effort": "xhigh",
+      "maxTokens": 32000,
+      "timeoutMs": 360000
+    },
+    {
+      "agentId": "a09",
+      "model": "openai/gpt-6.1-sol",
+      "api": "openrouter",
+      "effort": null,
+      "maxTokens": 2000,
+      "timeoutMs": 60000
+    },
+    {
+      "agentId": "a10",
+      "model": "moonshotai/kimi-k3.1-pro",
+      "api": "openrouter",
+      "effort": null,
+      "maxTokens": 2000,
+      "timeoutMs": 60000
+    }
+  ],
+  "preflight": {
+    "refused": null,
+    "claude": "the Claude API has no balance to read: the Console workspace's spend limit is the hard stop, and --max-cost is this run's own tally of its priced calls"
+  },
+  "ai": {
+    "seatModels": [
+      {
+        "model": "claude-sonnet-5-5",
+        "api": "claude",
+        "effort": "high",
+        "sliders": {
+          "risk": 0.95,
+          "clout": 0.5,
+          "loyalty": 0.05
+        },
+        "persona": "Charming, fearless, and lying to you right now."
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "api": "claude",
+        "effort": "high",
+        "sliders": {
+          "risk": 0.05,
+          "clout": 0.5,
+          "loyalty": 0.95
+        },
+        "persona": "Steady hands, a clean record, and every promise kept."
+      },
+      {
+        "model": "claude-haiku-5-5",
+        "api": "claude",
+        "effort": "xhigh",
+        "sliders": {
+          "risk": 0.5,
+          "clout": 0.95,
+          "loyalty": 0.5
+        },
+        "persona": "Every block is a stage and every stranger a fan."
+      },
+      {
+        "model": "openai/gpt-6.1-sol",
+        "api": "openrouter",
+        "sliders": {
+          "risk": 0.9,
+          "clout": 0.5,
+          "loyalty": 0.9
+        },
+        "persona": "Loyal to the bone and scared of nothing."
+      },
+      {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "api": "openrouter",
+        "sliders": {
+          "risk": 0.5,
+          "clout": 0.5,
+          "loyalty": 0.5
+        }
+      }
+    ],
+    "maxCost": 5,
+    "go": "Fix haiku setting , let\u2019s just do 1 season not 3 , no finale yet. We need a high risk low loyalty player then you can decide the rest.",
+    "spend": {
+      "cost": 2.1050990404999994,
+      "calls": 247
+    },
+    "perModel": {
+      "claude-sonnet-5-5": {
+        "api": "claude",
+        "efforts": [
+          "high"
+        ],
+        "seats": 2,
+        "calls": 108,
+        "in": 641278,
+        "out": 44176,
+        "reasoning": 31375,
+        "cost": 1.1440103999999995,
+        "failed": 2,
+        "skipped": 0,
+        "cutoffs": 0,
+        "fallbacks": 0,
+        "rescued": 0,
+        "finishes": {
+          "end_turn": 108
+        },
+        "medianMs": 4695,
+        "p90Ms": 6563
+      },
+      "claude-haiku-5-5": {
+        "api": "claude",
+        "efforts": [
+          "xhigh"
+        ],
+        "seats": 1,
+        "calls": 42,
+        "in": 234351,
+        "out": 194084,
+        "reasoning": 188120,
+        "cost": 0.10978726,
+        "failed": 0,
+        "skipped": 0,
+        "cutoffs": 0,
+        "fallbacks": 0,
+        "rescued": 0,
+        "finishes": {
+          "end_turn": 42
+        },
+        "medianMs": 10782,
+        "p90Ms": 63627
+      },
+      "openai/gpt-6.1-sol": {
+        "api": "openrouter",
+        "efforts": [],
+        "seats": 1,
+        "calls": 43,
+        "in": 177082,
+        "out": 5025,
+        "reasoning": 861,
+        "cost": 0.28074249999999995,
+        "failed": 0,
+        "skipped": 0,
+        "cutoffs": 0,
+        "fallbacks": 0,
+        "rescued": 0,
+        "finishes": {
+          "stop": 43
+        },
+        "medianMs": 3399,
+        "p90Ms": 4753
+      },
+      "moonshotai/kimi-k3.1-pro": {
+        "api": "openrouter",
+        "efforts": [],
+        "seats": 1,
+        "calls": 54,
+        "in": 232477,
+        "out": 21454,
+        "reasoning": 16464,
+        "cost": 0.5705588805000001,
+        "failed": 0,
+        "skipped": 0,
+        "cutoffs": 0,
+        "fallbacks": 0,
+        "rescued": 0,
+        "finishes": {
+          "stop": 54
+        },
+        "medianMs": 4860,
+        "p90Ms": 14754
+      }
+    },
+    "capped": false,
+    "halted": null,
+    "stops": []
+  },
+  "finishedAt": "2026-11-08T16:06:31.109Z",
+  "ms": 1212554
+}

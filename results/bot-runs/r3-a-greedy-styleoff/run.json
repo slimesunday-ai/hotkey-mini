@@ -1,0 +1,115 @@
+{
+  "command": "node run.mjs --bots --seeds 30 --lineup all-greedy --off style,duckWalkAway --out out/r3-a-greedy-styleoff --quiet",
+  "mode": "bots",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "lineup": "all-greedy",
+  "seats": [
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    },
+    {
+      "brain": "greedy"
+    }
+  ],
+  "systems": {
+    "audienceTastes": true,
+    "audienceGrowth": true,
+    "boredom": true,
+    "novelty": true,
+    "callShot": true,
+    "revenge": true,
+    "kingslayer": true,
+    "steals": true,
+    "attentionEnergy": true,
+    "dealtHands": true,
+    "cops": true,
+    "getaway": true,
+    "heatDecay": true,
+    "rent": true,
+    "nightThieves": true,
+    "crate": true,
+    "bounties": true,
+    "callOuts": true,
+    "promises": true,
+    "messages": true,
+    "board": true,
+    "parties": true,
+    "flash": true,
+    "king": true,
+    "style": false,
+    "battles": true,
+    "mugging": true,
+    "carTheft": true,
+    "bankJob": true,
+    "shooting": true,
+    "fistfights": true,
+    "leaderKing": true,
+    "smoothAudience": true,
+    "duckWalkAway": false
+  },
+  "off": [
+    "style",
+    "duckWalkAway"
+  ],
+  "sets": [],
+  "configHash": "676d632d",
+  "gitCommit": "5de3b730214c13a27e4fc6850fc3ac6c05c56383",
+  "startedAt": "2026-11-08T15:36:41.799Z",
+  "finishedAt": "2026-11-08T15:36:44.430Z",
+  "ms": 2631
+}

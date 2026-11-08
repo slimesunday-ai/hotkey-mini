@@ -8,8 +8,9 @@ Started 2026-11-08. This file keeps the new direction's design calls in one plac
 The build spec is [`SPEC.md`](SPEC.md), and how each round is tested is [`TUNING.md`](TUNING.md). Nothing here is built
 until slime says go.
 
-**How to answer:** reply in chat with the question number ("3.2: yes, but..."), or type under **Your answer**. Every
-answer gets recorded here. Each question also shows how mini works **now**, then a **suggestion** and **why**: Claude's
+**How to answer:** the easiest way is the answer page, https://claude.ai/artifact/X76GdQpeTQHbgEDNoBxiRC (private
+to slime). It has the same questions with one-tap answers, and Claude reads the answers back from it. You can also reply in
+chat with the question number ("3.2: yes, but..."), or type under **Your answer**. Every answer gets recorded here. Each question also shows how mini works **now**, then a **suggestion** and **why**: Claude's
 read, there to argue with.
 
 ## Part 1: Decided

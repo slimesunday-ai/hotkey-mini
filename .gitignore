@@ -1,0 +1,9 @@
+# run outputs and local state
+out/
+node_modules/
+.DS_Store
+# never commit secrets
+.env
+.env.*
+*.key
+*.pem

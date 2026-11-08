@@ -1,0 +1,263 @@
+{
+  "brief": {
+    "town": "A 3x3 grid of blocks. Top row: home, market, bank. Middle row: corner, bar, park. Bottom row: docks, precinct, jail. Moving to a neighbouring block (up, down, left or right) takes 1 hour. home: the apartments, where chemists cook, gunrunners build and everyone sleeps. market: the shop, straight shifts, pickpocketing. bank: scouting and the bank job. corner, bar and park: dealing spots; parties happen at the bar or the park; evicted agents sleep in the park. docks: smuggling runs and straight shifts; the crate lands here most. precinct: the cops start here. jail: not walkable.",
+    "goal": "Humans are watching this town live. The citizen with the most viewers over the season wins. Money buys gear that unlocks bigger plays. Heat leads to jail. Only the king (#1) can be killed.",
+    "fans": [
+      {
+        "group": "action",
+        "likes": "fights, shootings, chases, robberies"
+      },
+      {
+        "group": "drama",
+        "likes": "betrayals, call-outs, bounties, revenge"
+      },
+      {
+        "group": "weird",
+        "likes": "stunts, dances, whatever nobody else is doing"
+      },
+      {
+        "group": "feelgood",
+        "likes": "parties, gifts, kept promises, battles"
+      }
+    ],
+    "jobs": [
+      {
+        "job": "smuggler",
+        "does": "runs 4 chems or 2 parts in from the docks",
+        "buys": "nothing",
+        "sells": "chems to chemists, parts to gunrunners"
+      },
+      {
+        "job": "chemist",
+        "does": "cooks 2 chems into 3 product at home",
+        "buys": "chems from smugglers",
+        "sells": "product to dealers"
+      },
+      {
+        "job": "dealer",
+        "does": "sells up to 3 product to customers on the corner, bar or park",
+        "buys": "product from chemists",
+        "sells": "product to customers"
+      },
+      {
+        "job": "gunrunner",
+        "does": "builds 2 parts into 1 gun at home",
+        "buys": "parts from smugglers",
+        "sells": "guns"
+      }
+    ],
+    "gear": [
+      {
+        "item": "gun",
+        "price": 150,
+        "does": "unlocks shoot, drive-by, kill the king, bank job; +0.2 on mugs"
+      },
+      {
+        "item": "car",
+        "price": 500,
+        "does": "move up to 2 blocks; unlocks drive-by; needed for the bank job; a getaway roll"
+      },
+      {
+        "item": "armor",
+        "price": 200,
+        "does": "shots and kill attempts against you get -0.3 odds"
+      },
+      {
+        "item": "chain",
+        "price": 250,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "grill",
+        "price": 150,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "fit",
+        "price": 300,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      }
+    ],
+    "rules": [
+      "Rent is $40, due at 24:00 each day. Unpaid rent means eviction: you sleep in the park and can't cook or build at home.",
+      "Heat runs 0-5 stars. 3+ stars is wanted and public. A cop on your block arrests at 3 stars 40%, 4 stars 70%. 5 stars is arrest at hour end.",
+      "Jail is 6 hours (+3 if caught running), a fine of 50% of your cash, and stars back to 0. You can still talk.",
+      "Hospital is 6 hours. No actions; you can talk.",
+      "Only the king can be killed. A dead king revives at home after max(3, 12 - viewers/100) hours.",
+      "Promises in messages are recorded and never enforced.",
+      "Trades on the market board are guaranteed: money and goods swap at once.",
+      "Call your shot: announce a crime; done within 3 hours it earns double fan points; a cop moves toward the target and the attempt gets -0.15 odds.",
+      "Bounties: the game holds the cash; whoever next beats the target in a fistfight, mugs, shoots or kills it collects; the poster is revealed 12 hours later."
+    ],
+    "reply": "See REPLY."
+  },
+  "alerts": [],
+  "you": {
+    "id": "a01",
+    "name": "Juno",
+    "job": "smuggler",
+    "persona": "Dry humour, counts everything twice.",
+    "sliders": {
+      "risk": 0.5,
+      "clout": 0.1,
+      "loyalty": 0.6
+    },
+    "style": {
+      "levels": {
+        "risk": "mid",
+        "clout": "low",
+        "loyalty": "mid"
+      },
+      "labels": [
+        "lowkey"
+      ],
+      "pays": [
+        {
+          "what": "clout moves",
+          "moves": [
+            "drip_check",
+            "party",
+            "battle",
+            "call_out",
+            "crip_walk"
+          ],
+          "mult": 0.6
+        },
+        {
+          "what": "breaking a promise",
+          "mult": 0.9
+        },
+        {
+          "what": "keeping a promise",
+          "mult": 1.1
+        }
+      ],
+      "deals": []
+    },
+    "block": "docks",
+    "energy": 0,
+    "cash": 12,
+    "stars": 4,
+    "viewers": {
+      "total": 18,
+      "byGroup": {
+        "action": 10,
+        "drama": 0,
+        "weird": 8,
+        "feelgood": 0
+      }
+    },
+    "rank": "bottom half",
+    "items": [],
+    "stock": {
+      "chems": 4
+    },
+    "car": false,
+    "armor": false,
+    "home": "ok",
+    "state": "free",
+    "rentDue": 40,
+    "scouting": 0
+  },
+  "clock": {
+    "day": 1,
+    "hour": 6,
+    "t": 0,
+    "actingHoursLeft": 54
+  },
+  "last": null,
+  "memory": [],
+  "conversations": [],
+  "roster": [
+    {
+      "id": "a02",
+      "name": "Penny",
+      "job": "chemist",
+      "block": "home",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "some",
+      "visible": [],
+      "state": "free",
+      "king": true,
+      "bounty": 0,
+      "flashing": false
+    }
+  ],
+  "here": [],
+  "audience": [],
+  "board": [],
+  "bounties": [],
+  "callOuts": [],
+  "crate": null,
+  "headlines": [],
+  "inbox": [],
+  "menu": [
+    {
+      "id": "move",
+      "label": "Walk to a neighbouring block",
+      "energy": 3,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "",
+      "targets": null,
+      "args": {
+        "to": [
+          "corner",
+          "precinct"
+        ]
+      }
+    },
+    {
+      "id": "rest",
+      "label": "Rest",
+      "energy": 0,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "+15 energy",
+      "targets": null,
+      "args": null
+    },
+    {
+      "id": "lay_low",
+      "label": "Lay low",
+      "energy": 0,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "-1 star",
+      "why": "no fans; viewers drift",
+      "targets": null,
+      "args": null
+    }
+  ],
+  "talkOnly": false,
+  "cops": [
+    "precinct",
+    "precinct"
+  ],
+  "parties": [],
+  "callShots": []
+}

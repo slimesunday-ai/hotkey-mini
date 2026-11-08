@@ -1,0 +1,12 @@
+{
+  "name": "hotkey-mini",
+  "private": true,
+  "type": "module",
+  "description": "Headless playtest sim for the AI City attention game. A tuning tool, not the product.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "bots": "node run.mjs --bots --seeds 50",
+    "check-keys": "node scripts/check-keys.mjs"
+  }
+}

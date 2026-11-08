@@ -1,0 +1,278 @@
+{
+  "brief": {
+    "town": "A 3x3 grid of blocks. Top row: home, market, bank. Middle row: corner, bar, park. Bottom row: docks, precinct, jail. Moving to a neighbouring block (up, down, left or right) takes 1 hour. home: the apartments, where chemists cook, gunrunners build and everyone sleeps. market: the shop, straight shifts, pickpocketing. bank: scouting and the bank job. corner, bar and park: dealing spots; parties happen at the bar or the park; evicted agents sleep in the park. docks: smuggling runs and straight shifts; the crate lands here most. precinct: the cops start here. jail: not walkable.",
+    "goal": "Humans are watching this town live. The citizen with the most viewers over the season wins. Money buys gear that unlocks bigger plays. Heat leads to jail. Only the king (#1) can be killed.",
+    "fans": [
+      {
+        "group": "action",
+        "likes": "fights, shootings, chases, robberies"
+      },
+      {
+        "group": "drama",
+        "likes": "betrayals, call-outs, bounties, revenge"
+      },
+      {
+        "group": "weird",
+        "likes": "stunts, dances, whatever nobody else is doing"
+      },
+      {
+        "group": "feelgood",
+        "likes": "parties, gifts, kept promises, battles"
+      }
+    ],
+    "jobs": [
+      {
+        "job": "smuggler",
+        "does": "runs 4 chems or 2 parts in from the docks",
+        "buys": "nothing",
+        "sells": "chems to chemists, parts to gunrunners"
+      },
+      {
+        "job": "chemist",
+        "does": "cooks 2 chems into 3 product at home",
+        "buys": "chems from smugglers",
+        "sells": "product to dealers"
+      },
+      {
+        "job": "dealer",
+        "does": "sells up to 3 product to customers on the corner, bar or park",
+        "buys": "product from chemists",
+        "sells": "product to customers"
+      },
+      {
+        "job": "gunrunner",
+        "does": "builds 2 parts into 1 gun at home",
+        "buys": "parts from smugglers",
+        "sells": "guns"
+      }
+    ],
+    "gear": [
+      {
+        "item": "gun",
+        "price": 150,
+        "does": "unlocks shoot, drive-by, kill the king, bank job; +0.2 on mugs"
+      },
+      {
+        "item": "car",
+        "price": 500,
+        "does": "move up to 2 blocks; unlocks drive-by; needed for the bank job; a getaway roll"
+      },
+      {
+        "item": "armor",
+        "price": 200,
+        "does": "shots and kill attempts against you get -0.3 odds"
+      },
+      {
+        "item": "chain",
+        "price": 250,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "grill",
+        "price": 150,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "fit",
+        "price": 300,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      }
+    ],
+    "rules": [
+      "Rent is $40, due at 24:00 each day. Unpaid rent means eviction: you sleep in the park and can't cook or build at home.",
+      "Heat runs 0-5 stars. 3+ stars is wanted and public. A cop on your block arrests at 3 stars 40%, 4 stars 70%. 5 stars is arrest at hour end.",
+      "Jail is 6 hours (+3 if caught running), a fine of 50% of your cash, and stars back to 0. You can still talk.",
+      "Hospital is 6 hours. No actions; you can talk.",
+      "Only the king can be killed. A dead king revives at home after max(3, 12 - viewers/100) hours.",
+      "Promises in messages are recorded and never enforced.",
+      "Trades on the market board are guaranteed: money and goods swap at once.",
+      "Call your shot: announce a crime; done within 3 hours it earns double fan points; a cop moves toward the target and the attempt gets -0.15 odds.",
+      "Bounties: the game holds the cash; whoever next beats the target in a fistfight, mugs, shoots or kills it collects; the poster is revealed 12 hours later."
+    ],
+    "reply": "See REPLY."
+  },
+  "alerts": [
+    "A cop arrested you at home: 4 stars. You are in jail, fined $35."
+  ],
+  "you": {
+    "id": "a10",
+    "name": "Wren",
+    "job": "chemist",
+    "persona": "Cheerful, chatty, terrible liar.",
+    "sliders": {
+      "risk": 0.3,
+      "clout": 0.5,
+      "loyalty": 0.9
+    },
+    "style": {
+      "levels": {
+        "risk": "low",
+        "clout": "mid",
+        "loyalty": "high"
+      },
+      "labels": [
+        "safe",
+        "ride-or-die"
+      ],
+      "pays": [
+        {
+          "what": "risk moves",
+          "moves": [
+            "pickpocket",
+            "mug",
+            "steal_car",
+            "bank_job",
+            "fistfight",
+            "crate",
+            "shoot",
+            "drive_by",
+            "kill_king",
+            "run_cops"
+          ],
+          "mult": 0.8
+        },
+        {
+          "what": "breaking a promise",
+          "mult": 0.6
+        },
+        {
+          "what": "keeping a promise",
+          "mult": 1.4
+        }
+      ],
+      "deals": [
+        "Nobody owes you anything right now.",
+        "Lux (a04) is your ally: 3 friendly acts since Day 2 18:00."
+      ]
+    },
+    "block": "jail",
+    "energy": 40,
+    "cash": 35,
+    "stars": 0,
+    "viewers": {
+      "total": 260,
+      "byGroup": {
+        "action": 60,
+        "drama": 150,
+        "weird": 20,
+        "feelgood": 30
+      }
+    },
+    "rank": "top half",
+    "items": [],
+    "stock": {
+      "chems": 2
+    },
+    "car": false,
+    "armor": false,
+    "home": "ok",
+    "state": "jail",
+    "rentDue": 40,
+    "scouting": 0,
+    "until": 56
+  },
+  "clock": {
+    "day": 3,
+    "hour": 21,
+    "t": 51,
+    "actingHoursLeft": 3
+  },
+  "last": {
+    "move": "cook",
+    "ok": false,
+    "result": "arrested at home",
+    "why": "a cop on your block at 4 stars: 70%"
+  },
+  "memory": [
+    {
+      "kind": "promise",
+      "from": "a10",
+      "to": "a04",
+      "give": {
+        "item": "product"
+      },
+      "by": 49,
+      "status": "broken",
+      "made": 40,
+      "paid": 0
+    }
+  ],
+  "conversations": [
+    {
+      "with": "a04",
+      "lines": [
+        {
+          "hour": 45,
+          "from": "a04",
+          "text": "You owe me."
+        }
+      ]
+    }
+  ],
+  "roster": [
+    {
+      "id": "a04",
+      "name": "Lux",
+      "job": "chemist",
+      "block": "bar",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "some",
+      "visible": [
+        "fit"
+      ],
+      "state": "partying",
+      "king": false,
+      "bounty": 0,
+      "flashing": true
+    },
+    {
+      "id": "a05",
+      "name": "Rook",
+      "job": "dealer",
+      "block": "bar",
+      "stars": 4,
+      "wanted": true,
+      "crowd": "city",
+      "visible": [
+        "chain",
+        "armor"
+      ],
+      "state": "free",
+      "king": true,
+      "bounty": 300,
+      "flashing": false
+    }
+  ],
+  "here": [],
+  "audience": [
+    {
+      "group": "drama",
+      "likes": "betrayals, call-outs, bounties, revenge",
+      "servedLastHour": 4,
+      "note": ""
+    }
+  ],
+  "board": [],
+  "bounties": [],
+  "callOuts": [],
+  "crate": null,
+  "headlines": [
+    "Wren was arrested"
+  ],
+  "inbox": [],
+  "menu": [],
+  "talkOnly": true,
+  "cops": [
+    "home",
+    "corner"
+  ],
+  "parties": [
+    {
+      "host": "a04",
+      "block": "bar",
+      "untilHour": 52
+    }
+  ],
+  "callShots": []
+}

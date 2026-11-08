@@ -1,0 +1,844 @@
+{
+  "brief": {
+    "town": "A 3x3 grid of blocks. Top row: home, market, bank. Middle row: corner, bar, park. Bottom row: docks, precinct, jail. Moving to a neighbouring block (up, down, left or right) takes 1 hour. home: the apartments, where chemists cook, gunrunners build and everyone sleeps. market: the shop, straight shifts, pickpocketing. bank: scouting and the bank job. corner, bar and park: dealing spots; parties happen at the bar or the park; evicted agents sleep in the park. docks: smuggling runs and straight shifts; the crate lands here most. precinct: the cops start here. jail: not walkable.",
+    "goal": "Humans are watching this town live. The citizen with the most viewers over the season wins. Money buys gear that unlocks bigger plays. Heat leads to jail. Only the king (#1) can be killed.",
+    "fans": [
+      {
+        "group": "action",
+        "likes": "fights, shootings, chases, robberies"
+      },
+      {
+        "group": "drama",
+        "likes": "betrayals, call-outs, bounties, revenge"
+      },
+      {
+        "group": "weird",
+        "likes": "stunts, dances, whatever nobody else is doing"
+      },
+      {
+        "group": "feelgood",
+        "likes": "parties, gifts, kept promises, battles"
+      }
+    ],
+    "jobs": [
+      {
+        "job": "smuggler",
+        "does": "runs 4 chems or 2 parts in from the docks",
+        "buys": "nothing",
+        "sells": "chems to chemists, parts to gunrunners"
+      },
+      {
+        "job": "chemist",
+        "does": "cooks 2 chems into 3 product at home",
+        "buys": "chems from smugglers",
+        "sells": "product to dealers"
+      },
+      {
+        "job": "dealer",
+        "does": "sells up to 3 product to customers on the corner, bar or park",
+        "buys": "product from chemists",
+        "sells": "product to customers"
+      },
+      {
+        "job": "gunrunner",
+        "does": "builds 2 parts into 1 gun at home",
+        "buys": "parts from smugglers",
+        "sells": "guns"
+      }
+    ],
+    "gear": [
+      {
+        "item": "gun",
+        "price": 150,
+        "does": "unlocks shoot, drive-by, kill the king, bank job; +0.2 on mugs"
+      },
+      {
+        "item": "car",
+        "price": 500,
+        "does": "move up to 2 blocks; unlocks drive-by; needed for the bank job; a getaway roll"
+      },
+      {
+        "item": "armor",
+        "price": 200,
+        "does": "shots and kill attempts against you get -0.3 odds"
+      },
+      {
+        "item": "chain",
+        "price": 250,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "grill",
+        "price": 150,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "fit",
+        "price": 300,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      }
+    ],
+    "rules": [
+      "Rent is $40, due at 24:00 each day. Unpaid rent means eviction: you sleep in the park and can't cook or build at home.",
+      "Heat runs 0-5 stars. 3+ stars is wanted and public. A cop on your block arrests at 3 stars 40%, 4 stars 70%. 5 stars is arrest at hour end.",
+      "Jail is 6 hours (+3 if caught running), a fine of 50% of your cash, and stars back to 0. You can still talk.",
+      "Hospital is 6 hours. No actions; you can talk.",
+      "Only the king can be killed. A dead king revives at home after max(3, 12 - viewers/100) hours.",
+      "Promises in messages are recorded and never enforced.",
+      "Trades on the market board are guaranteed: money and goods swap at once.",
+      "Call your shot: announce a crime; done within 3 hours it earns double fan points; a cop moves toward the target and the attempt gets -0.15 odds.",
+      "Bounties: the game holds the cash; whoever next beats the target in a fistfight, mugs, shoots or kills it collects; the poster is revealed 12 hours later."
+    ],
+    "reply": "See REPLY."
+  },
+  "alerts": [
+    "Kim (a07) mugged you for $60 on the corner.",
+    "Moss (a09) called you out: the park, Day 2 15:00 through Day 2 21:00."
+  ],
+  "you": {
+    "id": "a03",
+    "name": "Vex",
+    "job": "dealer",
+    "persona": "Talks fast, never apologises, loves the corner.",
+    "sliders": {
+      "risk": 0.8,
+      "clout": 0.3,
+      "loyalty": 0.4
+    },
+    "style": {
+      "levels": {
+        "risk": "high",
+        "clout": "low",
+        "loyalty": "mid"
+      },
+      "labels": [
+        "reckless",
+        "lowkey"
+      ],
+      "pays": [
+        {
+          "what": "risk moves",
+          "moves": [
+            "pickpocket",
+            "mug",
+            "steal_car",
+            "bank_job",
+            "fistfight",
+            "crate",
+            "shoot",
+            "drive_by",
+            "kill_king",
+            "run_cops"
+          ],
+          "mult": 1.3
+        },
+        {
+          "what": "clout moves",
+          "moves": [
+            "drip_check",
+            "party",
+            "battle",
+            "call_out",
+            "crip_walk"
+          ],
+          "mult": 0.8
+        },
+        {
+          "what": "breaking a promise",
+          "mult": 1.1
+        },
+        {
+          "what": "keeping a promise",
+          "mult": 0.9
+        }
+      ],
+      "deals": []
+    },
+    "block": "corner",
+    "energy": 62,
+    "cash": 140,
+    "stars": 2,
+    "viewers": {
+      "total": 312,
+      "byGroup": {
+        "action": 200,
+        "drama": 80,
+        "weird": 20,
+        "feelgood": 12
+      }
+    },
+    "rank": "top 3",
+    "items": [
+      "gun"
+    ],
+    "stock": {
+      "product": 3
+    },
+    "car": false,
+    "armor": false,
+    "home": "ok",
+    "state": "free",
+    "rentDue": 40,
+    "scouting": 0
+  },
+  "clock": {
+    "day": 2,
+    "hour": 14,
+    "t": 26,
+    "actingHoursLeft": 28
+  },
+  "last": {
+    "move": "deal",
+    "ok": true,
+    "result": "sold 2 product for $43",
+    "why": "3 other dealers on the corner last hour pushed the price to 58%"
+  },
+  "memory": [
+    {
+      "kind": "grudge",
+      "who": "a07",
+      "what": "mugged you for $60",
+      "hour": 22
+    },
+    {
+      "kind": "promise",
+      "from": "a02",
+      "to": "a03",
+      "give": {
+        "cash": 50
+      },
+      "by": 30,
+      "status": "open",
+      "made": 20,
+      "paid": 0
+    },
+    {
+      "kind": "callout",
+      "caller": "a09",
+      "target": "a03",
+      "block": "park",
+      "untilHour": 33,
+      "status": "open"
+    },
+    {
+      "kind": "result",
+      "hour": 25,
+      "move": "deal",
+      "ok": true,
+      "what": "sold 2 product for $43"
+    }
+  ],
+  "conversations": [
+    {
+      "with": "a02",
+      "lines": [
+        {
+          "hour": 20,
+          "from": "a02",
+          "text": "I can front you 3 product, pay me 50 by tonight."
+        },
+        {
+          "hour": 21,
+          "from": "a03",
+          "text": "Deal. Send it."
+        }
+      ]
+    }
+  ],
+  "roster": [
+    {
+      "id": "a01",
+      "name": "Juno",
+      "job": "smuggler",
+      "block": "docks",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "some",
+      "visible": [],
+      "state": "free",
+      "king": false,
+      "bounty": 0,
+      "flashing": false
+    },
+    {
+      "id": "a02",
+      "name": "Penny",
+      "job": "chemist",
+      "block": "home",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "some",
+      "visible": [],
+      "state": "free",
+      "king": false,
+      "bounty": 0,
+      "flashing": false
+    },
+    {
+      "id": "a05",
+      "name": "Rook",
+      "job": "dealer",
+      "block": "corner",
+      "stars": 3,
+      "wanted": true,
+      "crowd": "big",
+      "visible": [
+        "chain"
+      ],
+      "state": "free",
+      "king": true,
+      "bounty": 200,
+      "flashing": true
+    },
+    {
+      "id": "a07",
+      "name": "Kim",
+      "job": "smuggler",
+      "block": "corner",
+      "stars": 3,
+      "wanted": true,
+      "crowd": "big",
+      "visible": [
+        "car",
+        "chain"
+      ],
+      "state": "free",
+      "king": false,
+      "bounty": 0,
+      "flashing": false
+    },
+    {
+      "id": "a09",
+      "name": "Moss",
+      "job": "gunrunner",
+      "block": "park",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "none",
+      "visible": [],
+      "state": "hospital",
+      "king": false,
+      "bounty": 0,
+      "flashing": false
+    }
+  ],
+  "here": [
+    {
+      "who": "a07",
+      "did": "deal",
+      "said": "this corner's mine"
+    },
+    {
+      "who": "a05",
+      "did": "drip_check",
+      "said": ""
+    }
+  ],
+  "audience": [
+    {
+      "group": "action",
+      "likes": "fights, shootings, chases, robberies",
+      "servedLastHour": 3,
+      "note": "Kim and Rook fought at the bar"
+    },
+    {
+      "group": "feelgood",
+      "likes": "parties, gifts, kept promises, battles",
+      "servedLastHour": 0,
+      "note": "nobody is serving them"
+    }
+  ],
+  "board": [
+    {
+      "good": "product",
+      "bestAsk": 14,
+      "bestBid": 10,
+      "listings": 3,
+      "askBy": "a02",
+      "npcAsk": 18
+    },
+    {
+      "good": "chems",
+      "bestAsk": 9,
+      "bestBid": 5,
+      "listings": 1,
+      "askBy": "a01",
+      "npcAsk": 12
+    }
+  ],
+  "bounties": [
+    {
+      "target": "a05",
+      "amount": 200,
+      "poster": null
+    }
+  ],
+  "callOuts": [
+    {
+      "caller": "a09",
+      "target": "a03",
+      "block": "park",
+      "untilHour": 33
+    }
+  ],
+  "crate": {
+    "block": "docks",
+    "untilHour": 31
+  },
+  "headlines": [
+    "Kim shot Penny at the bar",
+    "Rook is the king"
+  ],
+  "inbox": [
+    {
+      "from": "a02",
+      "text": "Where's my 50?",
+      "cash": 0,
+      "item": null,
+      "promise": null,
+      "hour": 25
+    }
+  ],
+  "menu": [
+    {
+      "id": "deal",
+      "label": "Deal product here",
+      "energy": 10,
+      "cash": 0,
+      "odds": 1,
+      "pays": 43,
+      "fans": {
+        "action": 0,
+        "drama": 1,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "+1 star if a cop is here (none now); else 15%",
+      "why": "3 other dealers here last hour: price at 58%",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0.15,
+      "steals": 0
+    },
+    {
+      "id": "move",
+      "label": "Walk to a neighbouring block",
+      "energy": 3,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "",
+      "targets": null,
+      "args": {
+        "to": [
+          "home",
+          "bar",
+          "docks"
+        ]
+      },
+      "heatRisk": 0,
+      "steals": 0,
+      "options": [
+        {
+          "args": {
+            "to": "home"
+          },
+          "odds": 1,
+          "pays": 0,
+          "fans": {
+            "action": 0,
+            "drama": 0,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "next": {
+            "id": "rest",
+            "odds": 1,
+            "pays": 0,
+            "fans": {
+              "action": 0,
+              "drama": 0,
+              "weird": 0,
+              "feelgood": 0
+            },
+            "heatRisk": 0.15,
+            "steals": 0,
+            "energy": 10,
+            "value": 7.25
+          },
+          "available": [
+            "crip_walk"
+          ],
+          "note": "home: 0 here"
+        },
+        {
+          "args": {
+            "to": "bar"
+          },
+          "odds": 1,
+          "pays": 0,
+          "fans": {
+            "action": 0,
+            "drama": 0,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "next": {
+            "id": "deal",
+            "odds": 1,
+            "pays": 61,
+            "fans": {
+              "action": 0,
+              "drama": 1,
+              "weird": 0,
+              "feelgood": 0
+            },
+            "heatRisk": 0.15,
+            "steals": 0,
+            "energy": 10,
+            "value": 7.25
+          },
+          "available": [
+            "deal",
+            "crip_walk",
+            "push_npc"
+          ],
+          "note": "bar: 1 here, a cop"
+        },
+        {
+          "args": {
+            "to": "docks"
+          },
+          "odds": 1,
+          "pays": 0,
+          "fans": {
+            "action": 0,
+            "drama": 0,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "next": null,
+          "available": [],
+          "note": "docks: 2 here"
+        }
+      ]
+    },
+    {
+      "id": "rest",
+      "label": "Rest",
+      "energy": 0,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "+15 energy",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "mug",
+      "label": "Mug someone on this block",
+      "energy": 15,
+      "cash": 0,
+      "odds": 0.55,
+      "pays": 10,
+      "fans": {
+        "action": 2,
+        "drama": 1,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "+1 star (+1 more armed)",
+      "why": "you have a gun: +0.2",
+      "targets": [
+        "a05",
+        "a07"
+      ],
+      "args": {
+        "take": [
+          "cash",
+          "chain",
+          "car",
+          null
+        ]
+      },
+      "heatRisk": 2,
+      "steals": 15,
+      "options": [
+        {
+          "target": "a05",
+          "odds": 0.55,
+          "pays": 10,
+          "fans": {
+            "action": 2,
+            "drama": 1,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 2,
+          "steals": 15,
+          "energy": 15,
+          "note": "Rook: chain"
+        },
+        {
+          "target": "a07",
+          "odds": 0.7,
+          "pays": 10,
+          "fans": {
+            "action": 2,
+            "drama": 1,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 2,
+          "steals": 12,
+          "energy": 15,
+          "note": "Kim: car, chain"
+        }
+      ]
+    },
+    {
+      "id": "buy",
+      "label": "Buy from the board by phone",
+      "energy": 4,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "product best ask $14",
+      "targets": null,
+      "args": {
+        "item": [
+          "product",
+          "chems"
+        ],
+        "qty": "int 1-5",
+        "from": [
+          "board"
+        ]
+      },
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "bounty",
+      "label": "Put a bounty on someone",
+      "energy": 3,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 3,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "the game holds the cash; poster revealed in 12 hours",
+      "targets": [
+        "a01",
+        "a02",
+        "a05",
+        "a07",
+        "a09"
+      ],
+      "args": {
+        "amount": "int 50-140"
+      },
+      "heatRisk": 0,
+      "steals": 0,
+      "options": [
+        {
+          "target": "a01",
+          "args": {
+            "amount": 50
+          },
+          "odds": 1,
+          "pays": -50,
+          "fans": {
+            "action": 0,
+            "drama": 3,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "cash": 50
+        },
+        {
+          "target": "a02",
+          "args": {
+            "amount": 50
+          },
+          "odds": 1,
+          "pays": -50,
+          "fans": {
+            "action": 0,
+            "drama": 3,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "cash": 50
+        },
+        {
+          "target": "a05",
+          "args": {
+            "amount": 50
+          },
+          "odds": 1,
+          "pays": -50,
+          "fans": {
+            "action": 0,
+            "drama": 3,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "cash": 50
+        },
+        {
+          "target": "a07",
+          "args": {
+            "amount": 50
+          },
+          "odds": 1,
+          "pays": -50,
+          "fans": {
+            "action": 0,
+            "drama": 3,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "cash": 50
+        },
+        {
+          "target": "a09",
+          "args": {
+            "amount": 50
+          },
+          "odds": 1,
+          "pays": -50,
+          "fans": {
+            "action": 0,
+            "drama": 3,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 0,
+          "steals": 0,
+          "energy": 3,
+          "cash": 50
+        }
+      ]
+    },
+    {
+      "id": "call_out",
+      "label": "Call someone out",
+      "energy": 5,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 2,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "the target has 3 hours to show",
+      "targets": [
+        "a01",
+        "a02",
+        "a05",
+        "a07"
+      ],
+      "args": {
+        "block": [
+          "home",
+          "market",
+          "bank",
+          "corner",
+          "bar",
+          "park",
+          "docks",
+          "precinct"
+        ]
+      },
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "lay_low",
+      "label": "Lay low",
+      "energy": 0,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "-1 star",
+      "why": "no fans; viewers drift",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    }
+  ],
+  "talkOnly": false,
+  "cops": [
+    "precinct",
+    "bar"
+  ],
+  "parties": [],
+  "callShots": [
+    {
+      "by": "a07",
+      "move": "mug",
+      "target": "a03",
+      "untilHour": 28
+    }
+  ]
+}

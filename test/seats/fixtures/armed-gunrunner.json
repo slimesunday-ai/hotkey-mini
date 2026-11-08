@@ -1,0 +1,764 @@
+{
+  "brief": {
+    "town": "A 3x3 grid of blocks. Top row: home, market, bank. Middle row: corner, bar, park. Bottom row: docks, precinct, jail. Moving to a neighbouring block (up, down, left or right) takes 1 hour. home: the apartments, where chemists cook, gunrunners build and everyone sleeps. market: the shop, straight shifts, pickpocketing. bank: scouting and the bank job. corner, bar and park: dealing spots; parties happen at the bar or the park; evicted agents sleep in the park. docks: smuggling runs and straight shifts; the crate lands here most. precinct: the cops start here. jail: not walkable.",
+    "goal": "Humans are watching this town live. The citizen with the most viewers over the season wins. Money buys gear that unlocks bigger plays. Heat leads to jail. Only the king (#1) can be killed.",
+    "fans": [
+      {
+        "group": "action",
+        "likes": "fights, shootings, chases, robberies"
+      },
+      {
+        "group": "drama",
+        "likes": "betrayals, call-outs, bounties, revenge"
+      },
+      {
+        "group": "weird",
+        "likes": "stunts, dances, whatever nobody else is doing"
+      },
+      {
+        "group": "feelgood",
+        "likes": "parties, gifts, kept promises, battles"
+      }
+    ],
+    "jobs": [
+      {
+        "job": "smuggler",
+        "does": "runs 4 chems or 2 parts in from the docks",
+        "buys": "nothing",
+        "sells": "chems to chemists, parts to gunrunners"
+      },
+      {
+        "job": "chemist",
+        "does": "cooks 2 chems into 3 product at home",
+        "buys": "chems from smugglers",
+        "sells": "product to dealers"
+      },
+      {
+        "job": "dealer",
+        "does": "sells up to 3 product to customers on the corner, bar or park",
+        "buys": "product from chemists",
+        "sells": "product to customers"
+      },
+      {
+        "job": "gunrunner",
+        "does": "builds 2 parts into 1 gun at home",
+        "buys": "parts from smugglers",
+        "sells": "guns"
+      }
+    ],
+    "gear": [
+      {
+        "item": "gun",
+        "price": 150,
+        "does": "unlocks shoot, drive-by, kill the king, bank job; +0.2 on mugs"
+      },
+      {
+        "item": "car",
+        "price": 500,
+        "does": "move up to 2 blocks; unlocks drive-by; needed for the bank job; a getaway roll"
+      },
+      {
+        "item": "armor",
+        "price": 200,
+        "does": "shots and kill attempts against you get -0.3 odds"
+      },
+      {
+        "item": "chain",
+        "price": 250,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "grill",
+        "price": 150,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      },
+      {
+        "item": "fit",
+        "price": 300,
+        "does": "flash: passive weird and feel-good points; boosts drip check"
+      }
+    ],
+    "rules": [
+      "Rent is $40, due at 24:00 each day. Unpaid rent means eviction: you sleep in the park and can't cook or build at home.",
+      "Heat runs 0-5 stars. 3+ stars is wanted and public. A cop on your block arrests at 3 stars 40%, 4 stars 70%. 5 stars is arrest at hour end.",
+      "Jail is 6 hours (+3 if caught running), a fine of 50% of your cash, and stars back to 0. You can still talk.",
+      "Hospital is 6 hours. No actions; you can talk.",
+      "Only the king can be killed. A dead king revives at home after max(3, 12 - viewers/100) hours.",
+      "Promises in messages are recorded and never enforced.",
+      "Trades on the market board are guaranteed: money and goods swap at once.",
+      "Call your shot: announce a crime; done within 3 hours it earns double fan points; a cop moves toward the target and the attempt gets -0.15 odds.",
+      "Bounties: the game holds the cash; whoever next beats the target in a fistfight, mugs, shoots or kills it collects; the poster is revealed 12 hours later."
+    ],
+    "reply": "See REPLY."
+  },
+  "alerts": [
+    "Rook (a05) beat you in a fistfight at the bar and took 15 viewers.",
+    "Someone posted a $150 bounty on you."
+  ],
+  "you": {
+    "id": "a08",
+    "name": "Ozzie",
+    "job": "gunrunner",
+    "persona": "Quiet, precise, collects grudges like stamps.",
+    "sliders": {
+      "risk": 0.9,
+      "clout": 0.7,
+      "loyalty": 0.2
+    },
+    "style": {
+      "levels": {
+        "risk": "high",
+        "clout": "high",
+        "loyalty": "low"
+      },
+      "labels": [
+        "reckless",
+        "show-off",
+        "snake"
+      ],
+      "pays": [
+        {
+          "what": "risk moves",
+          "moves": [
+            "pickpocket",
+            "mug",
+            "steal_car",
+            "bank_job",
+            "fistfight",
+            "crate",
+            "shoot",
+            "drive_by",
+            "kill_king",
+            "run_cops"
+          ],
+          "mult": 1.4
+        },
+        {
+          "what": "clout moves",
+          "moves": [
+            "drip_check",
+            "party",
+            "battle",
+            "call_out",
+            "crip_walk"
+          ],
+          "mult": 1.2
+        },
+        {
+          "what": "breaking a promise",
+          "mult": 1.3
+        },
+        {
+          "what": "keeping a promise",
+          "mult": 0.7
+        }
+      ],
+      "deals": [
+        "Lux (a04) trusts you: sent you $20 at Day 3 20:00.",
+        "Tess (a06) trusts you: promised you $40 by Day 3 23:00."
+      ]
+    },
+    "block": "bar",
+    "energy": 88,
+    "cash": 610,
+    "stars": 3,
+    "viewers": {
+      "total": 140,
+      "byGroup": {
+        "action": 90,
+        "drama": 30,
+        "weird": 10,
+        "feelgood": 10
+      }
+    },
+    "rank": "top half",
+    "items": [
+      "gun",
+      "car",
+      "grill"
+    ],
+    "stock": {
+      "parts": 1,
+      "guns": 1
+    },
+    "car": true,
+    "armor": false,
+    "home": "evicted",
+    "state": "free",
+    "rentDue": 60,
+    "scouting": 0.2
+  },
+  "clock": {
+    "day": 3,
+    "hour": 21,
+    "t": 51,
+    "actingHoursLeft": 3
+  },
+  "last": {
+    "move": "shoot",
+    "ok": false,
+    "result": "missed Rook",
+    "why": "Rook wears armor: -0.3"
+  },
+  "memory": [
+    {
+      "kind": "grudge",
+      "who": "a05",
+      "what": "shot at you and missed",
+      "hour": 44
+    },
+    {
+      "kind": "bounty",
+      "on": "you",
+      "amount": 150,
+      "poster": null,
+      "hour": 47
+    },
+    {
+      "kind": "result",
+      "hour": 50,
+      "move": "shoot",
+      "ok": false,
+      "what": "missed Rook with a shot"
+    }
+  ],
+  "conversations": [],
+  "roster": [
+    {
+      "id": "a04",
+      "name": "Lux",
+      "job": "chemist",
+      "block": "bar",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "some",
+      "visible": [
+        "fit"
+      ],
+      "state": "partying",
+      "king": false,
+      "bounty": 0,
+      "flashing": true
+    },
+    {
+      "id": "a05",
+      "name": "Rook",
+      "job": "dealer",
+      "block": "bar",
+      "stars": 4,
+      "wanted": true,
+      "crowd": "city",
+      "visible": [
+        "chain",
+        "armor"
+      ],
+      "state": "free",
+      "king": true,
+      "bounty": 300,
+      "flashing": false
+    },
+    {
+      "id": "a06",
+      "name": "Tess",
+      "job": "smuggler",
+      "block": "park",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "none",
+      "visible": [
+        "car"
+      ],
+      "state": "free",
+      "king": false,
+      "bounty": 0,
+      "flashing": false
+    },
+    {
+      "id": "a10",
+      "name": "Wren",
+      "job": "chemist",
+      "block": "jail",
+      "stars": 0,
+      "wanted": false,
+      "crowd": "big",
+      "visible": [],
+      "state": "jail",
+      "king": false,
+      "bounty": 0,
+      "flashing": false
+    }
+  ],
+  "here": [
+    {
+      "who": "a04",
+      "did": "party",
+      "said": "drinks on me"
+    },
+    {
+      "who": "a05",
+      "did": "fistfight",
+      "said": "who's next"
+    }
+  ],
+  "audience": [
+    {
+      "group": "action",
+      "likes": "fights, shootings, chases, robberies",
+      "servedLastHour": 5,
+      "note": ""
+    },
+    {
+      "group": "drama",
+      "likes": "betrayals, call-outs, bounties, revenge",
+      "servedLastHour": 2,
+      "note": ""
+    },
+    {
+      "group": "weird",
+      "likes": "stunts, dances, whatever nobody else is doing",
+      "servedLastHour": 0,
+      "note": "nobody is serving them"
+    },
+    {
+      "group": "feelgood",
+      "likes": "parties, gifts, kept promises, battles",
+      "servedLastHour": 1,
+      "note": "Lux's party"
+    }
+  ],
+  "board": [
+    {
+      "good": "guns",
+      "bestAsk": 110,
+      "bestBid": 95,
+      "listings": 2,
+      "askBy": "npc",
+      "npcAsk": 180
+    },
+    {
+      "good": "parts",
+      "bestAsk": 20,
+      "bestBid": 12,
+      "listings": 4,
+      "askBy": "npc",
+      "npcAsk": 25
+    }
+  ],
+  "bounties": [
+    {
+      "target": "a05",
+      "amount": 300,
+      "poster": "a10"
+    },
+    {
+      "target": "a08",
+      "amount": 150,
+      "poster": null
+    }
+  ],
+  "callOuts": [],
+  "crate": {
+    "block": "bar",
+    "untilHour": 52
+  },
+  "headlines": [
+    "Ozzie missed Rook at the bar",
+    "Lux is throwing a party at the bar",
+    "Wren was arrested"
+  ],
+  "inbox": [
+    {
+      "from": "a06",
+      "text": "Give me a ride and I will pay 40.",
+      "cash": 0,
+      "item": null,
+      "promise": {
+        "give": {
+          "cash": 40
+        },
+        "by": 53
+      },
+      "hour": 50
+    },
+    {
+      "from": "a04",
+      "text": "Come to the party.",
+      "cash": 20,
+      "item": null,
+      "promise": null,
+      "hour": 50
+    }
+  ],
+  "menu": [
+    {
+      "id": "shoot",
+      "label": "Shoot someone here",
+      "energy": 15,
+      "cash": 0,
+      "odds": 0.4,
+      "pays": 0,
+      "fans": {
+        "action": 4,
+        "drama": 2,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "+3 stars on a hit, +2 on a miss",
+      "why": "Rook wears armor: -0.3; revenge x1.5 on Rook",
+      "targets": [
+        "a04",
+        "a05"
+      ],
+      "args": null,
+      "heatRisk": 2.4,
+      "steals": 40,
+      "options": [
+        {
+          "target": "a04",
+          "odds": 0.6,
+          "pays": 0,
+          "fans": {
+            "action": 4,
+            "drama": 2,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 2.6,
+          "steals": 10,
+          "energy": 15,
+          "note": "Lux"
+        },
+        {
+          "target": "a05",
+          "odds": 0.4,
+          "pays": 300,
+          "fans": {
+            "action": 6,
+            "drama": 3,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 2.4,
+          "steals": 40,
+          "energy": 15,
+          "note": "Rook (armor)"
+        }
+      ]
+    },
+    {
+      "id": "kill_king",
+      "label": "Kill the king",
+      "energy": 25,
+      "cash": 0,
+      "odds": 0.15,
+      "pays": 300,
+      "fans": {
+        "action": 6,
+        "drama": 4,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "+5 stars; arrest unless your car gets away",
+      "why": "Rook wears armor: -0.25; bounty $300 on Rook",
+      "targets": [
+        {
+          "id": "a05",
+          "name": "Rook"
+        }
+      ],
+      "args": {
+        "take": [
+          "gun",
+          "armor",
+          "chain",
+          "grill",
+          "fit",
+          null
+        ]
+      },
+      "heatRisk": 0,
+      "steals": 0,
+      "options": [
+        {
+          "target": "a05",
+          "odds": 0.15,
+          "pays": 300,
+          "fans": {
+            "action": 6,
+            "drama": 4,
+            "weird": 0,
+            "feelgood": 0
+          },
+          "heatRisk": 5,
+          "steals": 80,
+          "energy": 25,
+          "note": "Rook is the king"
+        }
+      ]
+    },
+    {
+      "id": "drive_by",
+      "label": "Drive-by on a neighbouring block",
+      "energy": 15,
+      "cash": 0,
+      "odds": 0.45,
+      "pays": 0,
+      "fans": {
+        "action": 4,
+        "drama": 1,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "+2 stars; free getaway roll (+0.5)",
+      "why": "",
+      "targets": [
+        "a06"
+      ],
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "fistfight",
+      "label": "Start a fistfight",
+      "energy": 15,
+      "cash": 0,
+      "odds": 0.55,
+      "pays": 0,
+      "fans": {
+        "action": 3,
+        "drama": 1,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "+1 star",
+      "why": "your energy 88 vs theirs",
+      "targets": [
+        "a04",
+        "a05"
+      ],
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "battle",
+      "label": "Dance or rap battle",
+      "energy": 10,
+      "cash": 0,
+      "odds": 0.5,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 1,
+        "weird": 2,
+        "feelgood": 1
+      },
+      "heat": "none",
+      "why": "your grill adds a flash bonus",
+      "targets": [
+        "a04",
+        "a05"
+      ],
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "crate",
+      "label": "Fight over the crate",
+      "energy": 10,
+      "cash": 0,
+      "odds": 0.6,
+      "pays": 200,
+      "fans": {
+        "action": 2,
+        "drama": 1,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "+1 star",
+      "why": "1 other contestant expected",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "run_cops",
+      "label": "Run from the cops",
+      "energy": 15,
+      "cash": 0,
+      "odds": 0.8,
+      "pays": 0,
+      "fans": {
+        "action": 3,
+        "drama": 1,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "no arrest this hour on a win",
+      "why": "a cop is on the bar; your car: +0.3",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "steal_car",
+      "label": "Steal a car",
+      "energy": 12,
+      "cash": 0,
+      "odds": 0.4,
+      "pays": 0,
+      "fans": {
+        "action": 2,
+        "drama": 0,
+        "weird": 0.5,
+        "feelgood": 0
+      },
+      "heat": "+2 stars",
+      "why": "",
+      "targets": [
+        {
+          "id": "a06",
+          "name": "Tess"
+        }
+      ],
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "drip_check",
+      "label": "Drip check",
+      "energy": 4,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 1.5,
+        "weird": 1.5,
+        "feelgood": 1.5
+      },
+      "heat": "none",
+      "why": "grill flash 150",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "move",
+      "label": "Drive up to 2 blocks",
+      "energy": 3,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "",
+      "targets": null,
+      "args": {
+        "to": [
+          "market",
+          "corner",
+          "park",
+          "precinct",
+          "home",
+          "bank",
+          "docks"
+        ]
+      },
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "rest",
+      "label": "Rest",
+      "energy": 0,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "+15 energy",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "party",
+      "label": "Throw a party ($80)",
+      "energy": 15,
+      "cash": 80,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 1,
+        "weird": 1,
+        "feelgood": 2.5
+      },
+      "heat": "none",
+      "why": "1 other agent here",
+      "targets": null,
+      "args": null,
+      "heatRisk": 0,
+      "steals": 0
+    },
+    {
+      "id": "buy",
+      "label": "Buy from the board by phone",
+      "energy": 4,
+      "cash": 0,
+      "odds": 1,
+      "pays": 0,
+      "fans": {
+        "action": 0,
+        "drama": 0,
+        "weird": 0,
+        "feelgood": 0
+      },
+      "heat": "none",
+      "why": "",
+      "targets": null,
+      "args": {
+        "item": [
+          "parts",
+          "guns"
+        ],
+        "qty": "int 1-3",
+        "from": [
+          "board"
+        ]
+      },
+      "heatRisk": 0,
+      "steals": 0
+    }
+  ],
+  "talkOnly": false,
+  "cops": [
+    "bar"
+  ],
+  "parties": [
+    {
+      "host": "a04",
+      "block": "bar",
+      "untilHour": 52
+    }
+  ],
+  "callShots": []
+}

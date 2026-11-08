@@ -11,3 +11,8 @@ product; the full game lives in a separate repo (the trunk) and is not touched f
 No API keys live in this repo. The AI path reads keys from `~/.config/openrouter/key` and `~/.config/anthropic/key`
 (outside the repo), a pre-commit hook (`scripts/check-keys.mjs`) blocks key-shaped strings, and every paid run needs
 slime's go.
+
+## License
+
+All rights reserved. hotkey mini is published to be read; it is not open source, and no permission is granted to use,
+copy, modify or distribute any part of it. See [LICENSE](LICENSE).

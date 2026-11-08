@@ -1,6 +1,7 @@
 {
   "name": "hotkey-mini",
   "private": true,
+  "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "description": "Headless playtest sim for the AI City attention game. A tuning tool, not the product.",
   "engines": { "node": ">=22" },

@@ -139,3 +139,78 @@ Claude checked the key quotes against the sources. Paths are shortened as follow
   number.
 - **Model personality:** the market research says to move decisions into code, and the what-blew-up file treats model
   personality as the content.
+
+## Second pass (11-08): every file, with a ledger
+
+slime: "Run the additional review". The first pass skimmed its two biggest piles, so four more agents read all 54
+files and logged each one as "nothing new" or a finding:
+- all 18 mintfluencer learnings and 2 topic pages;
+- the 16 degen learnings from 06-07 to 06-15, and the hub;
+- the 11 degen-bettable files the first pass didn't quote;
+- the 6 sources it missed: transit, stylometry, and the conversations vault's mintfluencer arc, overview and abandoned
+  convergence fix.
+
+Claude checked the key quotes. New, beyond the first pass:
+
+### Relationships and drama
+- **AIs don't start the chains.**
+  - mintfluencer's DM → leak → severed-tie chain never ran: "Still 0 DMs", and ties stayed "NEUTRAL/intensity-1"
+    (W/learning/2026-06-06-mintfluencer-bug-audit-p0p1-fixes.md:41; W/learning/2026-06-06-mintfluencer-sim-quality-fixes.md:23).
+  - In mini's `ai-s2`, every promise came from a scripted bot (Dutch 10, Kim 3, Moss 2), and the AI seats made none.
+- **Standings plus a license to scheme made agents gang up on the leader.** degen's survival season injected "the
+  leaderboard, the rival just ahead, explicit license to scheme/ally/betray". The result: "a coalition ganged up on the
+  leader" (W/learning/2026-06-15-degen-survival-game-v1-experiment.md:22, 26).
+- **Victims need a right of reply.** degen-bettable's feed was "ten parallel monologues; attacks invisible to victims"
+  until "WHAT-JUST-HIT-YOU" event shadows went in (W/learning/2026-07-10-degen-bettable-chronicle-jul03-jul07.md:42).
+  Mini already has alert lines for acts against an agent.
+- **The night story needs an editor.**
+  - degen's survival season found "the showrunner EDIT is the moat" (W/learning/2026-06-15-degen-survival-game-v1-experiment.md:31).
+  - mintfluencer ran one narrator call per sim-day on the gap between the post and the private state, and it was the
+    best part of the run (W/learning/2026-06-06-mintfluencer-sim-quality-fixes.md:30).
+
+### Voices and loops
+- **slime's rule from mintfluencer:** "the more we try to fix convergence the worse it gets, they need to be able to
+  read all context... we need to strive for maximum continued conversation as it's more interesting than convergence"
+  (W/learning/2026-05-22-mintfluencer-anti-convergence-arc.md:38). Loop fixes must not hide what other agents said.
+- **Fixes that measured:**
+  - holding back tics on about 65% of turns, rotating examples and excluding openers took repeats from 91% to 50%
+    (W/learning/2026-06-14-degen-voice-gravity-chatroom.md:20);
+  - a guard on the agent's own recent lines plus a rotating conversational move took near-copies from 7% to 2% (same
+    file, :25).
+- **The root cause was the agent's own memory replayed verbatim.** Beliefs had "no limit, no importance ranking, no
+  decay", and the last 5 outputs were replayed every tick
+  (W/learning/2026-06-02-mintfluencer-intra-agent-looping-binding-constraint.md:25-26).
+- **Facts printed every turn get echoed.** mintfluencer's rent countdown was "always-on, removed for too-constant
+  priming" (W/topic/mintfluencer-context-briefing.md:128).
+- **Specific beats generic.** Genericizing gigs to "Work a shift" caused a "narrative loss" and was "reverted". The
+  lesson: "micro-event seeds + specific gig types are sufficient content fuel"
+  (W/learning/2026-05-22-mintfluencer-anti-convergence-arc.md:76, 80).
+- **A fingerprint fixes typing, not concepts.** It "helped surface markers but not conceptual vocabulary absorption"
+  (conversations vault, Themes/Abandoned/vocabulary-convergence-multi-agent-fix.md:13). Voice instructions in prompts
+  leak, so enforce them in code (~/Desktop/research compass 2730aaef:31).
+- **The cast needs a mix of agreeable and contrarian agents.** "Outcomes are worst when all agents are agreeable"
+  (compass 2730aaef:40).
+
+### Drugs, events and money
+- **A dose should also change play in code.** degen-bettable's code picked the move and the thought previewed it; a dose
+  could likewise override sliders and menu for its hours, so an ignored recipe still changes play
+  (W/learning/2026-06-30-degen-bettable-strategy-engine-and-judge.md:21-23).
+- **Compliance varies.** It depends on the persona and on whether an order is self-directed or aimed at someone, so log
+  it by recipe type and model (W/learning/2026-06-11-degen-fresh-run-results.md:24).
+- **Events need a stake and a move for everyone.**
+  - Each event needs a good move for both bold and cautious agents (W/learning/2026-06-07-degen-part-b-market-and-anti-convergence.md:59).
+  - Handing one headline "to 15/15 agents" made a monoculture (W/learning/2026-06-14-degen-voice-gravity-chatroom.md:23).
+  - Shared mood events converge agents, while stakes events split them.
+- **Loops need restoring forces.** degen's lead share ran "9% → … → 100%", and its first cull was "a 4-clump"
+  (W/learning/2026-06-15-degen-survival-ui-builds-v2-run.md:34). Stagger rent and give every loop a sink.
+- **Paid actions need curating.** slime on degen-bettable's first bet board: "you took my two examples and made them
+  the whole surface … needs curation" (W/learning/2026-07-09-degen-bettable-wave-1-5-bet-surface.md:14-15).
+
+### Rides and testing
+- **Rides need a rule difference, not just speed.** At equal pace, "a kerb-riding scooter beat the cab on 35 of 60 long
+  trips" (R/2026-10-09-traffic-transit-and-crowds.md:91).
+- **Every run should prove each system fired.** degen-bettable's watched "snowball" runs were deathless because the
+  runner skipped the elimination pass.
+- **The cheapest test was never run.** mintfluencer's "10-manual-videos-on-X validation test has not been run"
+  (conversations vault, Themes/Project-arcs/mintfluencer-arc.md:74). Mini can cut recap clips from `ai-s1` and `ai-s2`
+  for free.

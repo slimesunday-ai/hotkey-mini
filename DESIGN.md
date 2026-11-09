@@ -13,11 +13,12 @@ slime). It has the same questions with one-tap answers, and Claude reads the ans
 chat with the question number ("3.2: yes, but..."), or type under **Your answer**. Every answer gets recorded here. Each
 question also shows how mini works **now**, then a **suggestion** and **why**: Claude's read, there to argue with.
 
-**Where it stands (11-08):** slime answered round 2 (Part 3) and round 3 (Part 4) on the answer page. The comeback test
+**Where it stands (11-09):** slime answered round 2 (Part 3) and round 3 (Part 4) on the answer page. The comeback test
 in between changed how the season is scored (Part 1). Every sim question is now decided; only the money questions in
 Part 2 are open. An outside review then changed six calls and added six (Part 1, "After an outside review"). A
-research comparison added the medic and the reporter and more (Part 1, "After the research comparison"); peaceful
-conflict is open (Part 2). Next: the first batch's build spec, once slime says go.
+research comparison added the medic and the reporter and more (Part 1, "After the research comparison"). On 11-09 the
+medic's, the cop's and the reporter's work was settled (Part 1). Peaceful conflict is open (Part 2). Next: the first
+batch's build spec, once slime says go.
 
 ## Part 1: Decided
 
@@ -186,10 +187,11 @@ Claude then checked each addition against the 11-06 loop: max entertainment, age
 violent, weird and peaceful play all viable. That changed three additions, dropped one and parked others:
 - **Jobs.** slime: "I think medic, and reporter, and we keep cop as is".
   - **medic** (built first): runs the hospital. Patients pay to get out sooner, the medic takes a cut of viewers'
-    revive payments the way a chemist does of drugs, and it chooses who to save;
-  - **reporter** (built second): publishes what other agents can't see, like a plan, a stash or who snitched. The
-    details are still to design;
-  - the cop stays as planned (5.1).
+    revive payments the way a chemist does of drugs, and it chooses who to save. Its daily work was settled 11-09
+    ("The medic's work", below);
+  - **reporter** (built second): publishes what other agents can't see, like a plan, a stash or who snitched. Its work
+    was settled 11-09 ("The reporter's work", below);
+  - the cop stays as planned (5.1). Its work was settled 11-09 ("The cop's work", below).
 - **Work:** the generic shift becomes gigs named for each place. Some are honest (busking at the park, unloading
   boats at the docks) and some are petty crime (shoplifting at the market, rolling drunks at the bar), so peaceful
   play keeps a living. A later batch.
@@ -255,11 +257,144 @@ violent, weird and peaceful play all viable. That changed three additions, dropp
 - **Corrected:** 6.1 said hotkey's AIs traded once prices were on screen. Prices were needed but not enough: showing
   them got 2 deals against a target of 10. Standing orders then raised what agents paid each other from $240 to $645.
 
+**The medic's work (11-09).** slime: "what if npcs could be revived/healed by medics? … doing something to npcs is cheap
+and provides only small benefit, where real agent play still is the main way to earn". After talking it over: "looks
+right add the medic section to design.md".
+- **Why the medic needs more than agents:** agents went to hospital or died once in `ai-s1` and 6 times in `ai-s2`,
+  across all 3 days, and a fistfight never sends anyone there. A medic that treated only agents would have almost
+  nothing to do.
+- **Why NPC work is the medic's main move, not a side move:** the cheap NPC moves mini already has go unused. In the two
+  paid seasons the AI players took 421 turns: 5 pickpockets, 3 pushes and 1 shift. Cooking still took 8–11% of their
+  turns, though it earns almost no viewers, because it's how a chemist makes money. NPC work gets done when it's a
+  job's main move.
+- **Patch-ups** (slime: "patch up's i like"):
+  - the medic sets a price once and changes it when it wants. "Get patched up" is always in an agent's hand (the 8
+    moves it's dealt each hour) while the medic is on its block, and the agent spends its turn on it instead of resting;
+  - +25 energy, never above 100: more than resting (+15 on top of the hourly refill), less than a night's sleep or a
+    dose (+40 each). It pays back a failed mug (−25) and most of a fight the attacker lost (−30);
+  - once per patient every 6 hours, so a rich agent can't skip resting forever;
+  - each one costs the medic 8 energy, so it does about 5 a day alongside its other work;
+  - the customers are attackers, fight losers and tired agents. A fistfight costs the attacker 15 and the loser 15
+    more (in a call-out fight both pay the 15). A mug costs the mugger 15, plus 10 if it fails; the victim loses cash
+    or an item and some viewers, but no energy;
+  - energy also sets fight odds (+10% for every 40 energy ahead of the opponent), so a patch-up before a call-out is a
+    real edge.
+- **Hooked NPCs** (slime: "we just need some npc's in game that are hooked on drugs that the medic can administer a
+  narcan like drug"):
+  - a few hang around the corner, the bar and the park, where dealers sell;
+  - a few times a day one overdoses, more often on a block where someone dealt that day;
+  - the medic gives it an antidote with a made-up name, since Narcan is a real brand ("wake-up shot" for now);
+  - the medic gets a small fee from the city, about a shift's $14, and some feel-good viewers;
+  - if nobody comes, an ambulance takes the NPC away after a few hours. Nobody dies.
+- **Bystanders** (slime: "bystanders in shootings are nice"): a shooting or drive-by on a busy block can hit one, and
+  the shooter gets an extra star. The medic treats them like a hooked NPC.
+- **The medic hears things** (slime: "medic hears things is nice"): now and then a treatment tells the medic one true
+  thing. An agent getting patched up lets slip its plan or where its stash is, and a woken NPC or a bystander says who
+  did the last crime on that block. The medic can keep it, sell it to the reporter or a rival, or lie about it.
+- **The hospital** works as decided 11-08: patients pay to get out sooner, the medic takes a cut of viewers' revive
+  payments, and it chooses who to save.
+- **One move:** the medic's "treat" covers a hooked NPC or a bystander on its block, and a patient in hospital. It's the
+  medic's job move, so it's always in its hand. Other agents see "get patched up" only while the medic is on their
+  block.
+- **The limits:**
+  - NPCs stay a crowd on each block, run by rules: no AI, no names, no cost. On the show they can still walk around;
+  - no NPC move takes viewers from an agent. Only moves against agents do, so fighting other agents stays the main way
+    to earn;
+  - overdoses and bystanders come only when the rules make them, so the medic can't grind them, and repeating a move
+    within 6 hours already halves its viewer points each time;
+  - no NPC moves beyond the medic's and the planned gigs. slime: "agreed on long menus".
+- **What it isn't:** a way for the medic to win. It keeps the medic busy, paid and on screen. Winning without violence
+  is still open (Part 2).
+- **Changes:** 3.4 said energy could be bought only as a dose; a patch-up is now a second way (3.2 and 3.4 are
+  marked). A dose still gives more (+40) and doesn't need the medic nearby.
+- **Dropped:** a dose knocking out the agent who took it, for the medic to wake (slime: "i dont like drugs knocking out
+  agents").
+- **Numbers** are starting guesses for the free bot runs to tune.
+
+**The cop's work (11-09).** slime kept the cop as planned (11-08: "we keep cop as is"), then said of Claude's plan for
+it: "all looks right and i agree with all your suggestions". This fills in 5.1's player cop.
+- **What the sim shows** (`ai-s1`, `ai-s2`):
+  - about 20 arrests a season, rising each day (4–6 on day 1, 9–10 on day 3); about half are AI players;
+  - jail already takes 13–16% of all agent-hours;
+  - a wanted agent (3+ stars) is on the street in about 70% of hours, usually just one;
+  - a typical fine is about $30, since it's half the cash the agent carries;
+  - in hotkey, an AI cop took bribes and arrested the briber anyway.
+- **It takes one NPC cop's place:** one NPC cop plus the player cop, so the pressure stays the same and half of it is a
+  character. This changes 8.2, which added the player cop on top of two. Why: jail already takes 13–16% of hours.
+- **Arrest** is its one new move. It's the cop's job move, so it's always in its hand. It targets a wanted agent on its
+  block, at the NPC cops' odds (40% at 3 stars, 70% at 4, certain at 5), and the target can still run from the cops.
+  The cop's view shows where crime happened in the last 3 hours, which is what the NPC cop chases.
+- **Pay:** the cop keeps the arrested agent's fine. No money is created, so friends can't farm arrests (hotkey's rule),
+  and a rich wanted agent is the prize. When the NPC cop arrests someone on the cop's block or next door, the cop gets
+  half that fine (slime: "Npc arrests should give a cut to cop agents in the area").
+- **Viewers:** an arrest takes 15% of the arrested agent's viewers, like winning a fistfight. That makes the cop the
+  lawful way to win that 5.1 promised.
+- **Bribes** need no new rule: an agent sends the cop cash with a promise, through normal messages. The cop can take it
+  and arrest anyway. Viewers see it all.
+- **Dirty cops can fall:** if the reporter publishes a bribe, the cop gets +2 stars. A wanted cop can't arrest (hotkey's
+  rule), and the NPC cop can arrest it.
+- **Leads:** snitch tips (8.6) reach the player cop too.
+- **Attacking the cop** is allowed, but any crime against it adds 2 extra stars.
+- **Honest or dirty:** honest pay is modest and bribes are where the money is. The owner's loyalty setting tilts it.
+- **Numbers** are starting guesses for the free bot runs to tune.
+
+**The reporter's work (11-09).** slime: "all looks right and i agree with all your suggestions". This fills in the
+reporter added 11-08.
+- **What the sim shows** (`ai-s1`, `ai-s2`):
+  - viewers already see everything ("No secrets from viewers", above), so a scoop is never news to them. The reporter's
+    job is the reveal: viewers watch the agents find out. 9.1 calls a private plan the victim can't see the core of the
+    show, and the reporter is its payoff;
+  - plenty is hidden from agents: 25–40 private messages a day, 12–15 promises a season (8–12 of them broken),
+    everyone's cash, who posted a bounty (hidden 12 hours) and who snitched (hidden a few hours);
+  - agents share a block in 38–50% of acting hours, so a reporter usually has someone to dig on;
+  - the warning: in hotkey, scams dropped to zero once exposure became an automatic public tag (a correlation, not
+    proven). Betrayal needs exposure by word of mouth, so the reporter can't expose everything.
+- **Dig** is the reporter's job move, so it's always in its hand. It works on an agent on its block: the reporter learns
+  one true thing the game holds about it, such as a private message it sent, a broken promise, its cash, a hidden gun,
+  its stash, a bounty it posted, a snitch or a bribe.
+- **Other sources:** the medic sells what it hears, and any agent can tip the reporter by message.
+- **Publish**, once a day: one fact goes into every agent's view as the day's news, and into the night recap. Published
+  facts are true, and the headline is in the reporter's own words. Lies stay in private messages, like anyone's.
+- **What a story does** (rules, so agents act on it):
+  - cash, a stash or a hidden gun: other agents' mug lines show what's at stake;
+  - a snitch or a bounty poster: the target finds out now instead of hours later;
+  - a bribe: the cop gets +2 stars;
+  - a broken promise: the breaker shows as "exposed" on everyone's deal lines for a day;
+  - a leaked private message: no rule; the agents read it and decide;
+  - no story takes viewers from its subject. Exposés that steal viewers were in the peaceful-conflict list slime didn't
+    like (Part 2).
+- **Burying a story**, the dirty path: the reporter names a price to kill a story. The game holds the cash and the story
+  until the deadline, since deals the game holds go through (53% against 1.5% face to face). If the subject pays, the
+  story can't run. Blackmail adds a star.
+- **Pay:** a published story earns drama viewers, more when it's about the king or a top agent, plus a small fee from the
+  city (about a shift's $14). Selling facts and burying stories earn cash.
+- **Limits:** one story a day exposes a third of a season's betrayals at most, so cheap talk still works and each story
+  is an event. Digging takes a turn and needs the subject on the reporter's block, so the reporter follows people
+  around, which keeps it on screen.
+- **Numbers** are starting guesses for the free bot runs to tune.
+
+**How the three jobs fit:** the medic hears things, the reporter publishes them, and the cop either gets exposed or
+arrests whoever was. Each job has an honest way and a dirty way to play, and the owner's style tilts which one an agent
+takes.
+
+**The dealt hand stays (11-09).** slime asked whether agents could be served moves based on their settings, cycling
+through different ones. Mini already does that: each hour every agent is dealt a hand of 8 moves.
+- Moving, resting, its job's move, the crate, killing the king and running from the cops are always in it when
+  possible.
+- A reckless agent always gets its big risky moves, and a show-off its show moves.
+- The rest is a fresh draw each hour that leans toward the owner's style.
+- In `ai-s1` and `ai-s2`, 0 of 447 AI turns tried a move outside the hand. slime: "keep dealth hand as is".
+- Each new job's moves (patch-ups, treat, arrest, dig) are always dealt when they apply.
+- **Dropped:** Claude's "hide nothing" (a short line naming the moves left out of the hand), since the hand hasn't
+  caused problems.
+
 ## Part 2: Open
 
 **Peaceful conflict** (open, 11-08). Peaceful and weird agents need a way to win. In 200 bot seasons the saint won
 1% and the showboat 5%, from 10% of the seats each. The only way to take a rival's viewers without violence is a battle
 (8%). slime didn't like Claude's first list (bigger battles, party wars, exposés, saves): "we can ideate in that later".
+The medic's work (11-09, Part 1) keeps a peaceful agent busy and paid, but it isn't a way to win. The cop's arrests
+(11-09) are a lawful way to win, not a peaceful one.
 
 **Paid public warnings** (optional): a fan pays more to warn an agent, in public ("@kai paid $50 to warn Juno").
 
@@ -378,6 +513,7 @@ written is the decision.
 - **Your answer:** go with the suggestion.
   Changed 11-08 after the outside review: +2 an hour, and none in jail or hospital (Part 1).
   Also 11-08: a guardrail eases the refill back if resting climbs well above 6–8% of AI turns (Part 1).
+  Added 11-09: a patch-up from the medic gives +25 (Part 1, "The medic's work").
 - **Suggestion:** keep it, and make the attention bonus a bit bigger, up to +3 an hour.
 - **Why:** your rule is that attention feeds energy, so being watched should visibly help. The cap stops the leader from
   snowballing.
@@ -392,6 +528,7 @@ written is the decision.
 **3.4 Can an agent buy energy?**
 - **Now:** no.
 - **Your answer:** go with the suggestion.
+  Changed 11-09: a patch-up from the medic is a second way to buy energy (Part 1, "The medic's work").
 - **Suggestion:** only by buying a dose from a chemist, without knowing what's in it.
 - **Why:** that's the reason an agent would take a drug on purpose: it needs the energy and gambles on the trip. It also
   gives chemists something to sell to agents.
@@ -471,6 +608,7 @@ written is the decision.
 - **Your answer:** go with the suggestion. slime: "That was already the plan, Npc arrests should give a cut to cop
   agents in the area or something"
   Added 11-08: a medic and a reporter join the jobs, and the cop stays as planned (Part 1).
+  Added 11-09: the medic's, the cop's and the reporter's work (Part 1).
 - **Suggestion:** keep the four, and add a fifth: a cop played by an agent.
 - **Why:** a player cop is a built-in rival for every criminal, and a lawful path that's still watchable. hotkey's design
   is ready to borrow: patrol, arrest wanted agents for a reward, take bribes.
@@ -628,6 +766,7 @@ written is the decision.
 - **Now:** 2 NPC cops chase the block with the most recent crime. The arrest chance depends on stars: 40% at 3, 70% at
   4, certain at 5.
 - **Your answer:** go with the suggestion.
+  Changed 11-09: the player cop takes one NPC cop's place (Part 1, "The cop's work").
 - **Suggestion:** keep the NPC cops, and add the player cop (5.1).
 - **Why:** NPC cops are predictable for AIs, and a player cop adds a rivalry.
 
@@ -662,6 +801,7 @@ written is the decision.
 **8.6 Can agents snitch on each other?**
 - **Now:** no.
 - **Your answer:** go with the suggestion.
+  Added 11-09: tips reach the player cop too, and the reporter can expose a snitch early (Part 1).
 - **Suggestion:** yes. At the precinct, an agent can tip the cops on another agent, which adds heat to the target. The
   target finds out who snitched a few hours later.
 - **Why:** ratting is a betrayal, and betrayal is the best drama. Viewers can't pay for it (you ruled that out), but an
@@ -672,6 +812,7 @@ written is the decision.
 **9.1 How do agents talk?**
 - **Now:** a line said out loud to the block, and private messages delivered the next hour. Viewers now see all of it.
 - **Your answer:** go with the suggestion.
+  Added 11-09: the reporter can dig up a private message and publish it (Part 1, "The reporter's work").
 - **Suggestion:** keep it. Private messages stay hidden from other agents.
 - **Why:** viewers watching a private plan the victim can't see is the core of the show.
 

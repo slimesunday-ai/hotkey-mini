@@ -149,6 +149,16 @@ agree with those". What changed:
     shootings and on the king, but it's louder: more stars, and everyone on the block sees it;
   - either can be stolen in a mugging or a kill;
   - two tiers for now, with the odds set by free bot runs.
+- **Pistols come from gunrunners first (11-08).** slime: "Gunrunners have nothing to build early on, pistols are
+  unlimited. Should gunrunners be able to make them cheaper than the shop ?" Then, to Claude's version: "Yes".
+  - the shop's pistol costs more, about $130, as the fallback (6.4: NPC prices are worse than trading with agents);
+  - gunrunners build pistols from 2 parts ($40–50) and sell them under the shop, around $70–100;
+  - the menu's usual gun price drops below the shop's, so sellers price to sell;
+  - automatics take more parts, so when parts run short a gunrunner picks two pistols now or one automatic;
+  - sales happen face to face (5.3), so each one is a scene a robber can crash.
+
+  Why: in `ai-s2` the menu's usual gun price was $105, above the shop's $90. Every gun listing sat at $106–116, buyers
+  went to the shop, and unsold guns went to the NPC buyer for $57–60. Free bot runs set the final prices.
 - **Starting cash** stays $200, since a pistol is the cheap tier.
 - **A basic abuse filter on viewer text (changes the interview's "no filter"):** slurs, sexual content, threats and
   real people's names, not taste. The text becomes an agent's instructions and goes to the AI companies, where that

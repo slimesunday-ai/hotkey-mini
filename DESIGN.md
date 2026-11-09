@@ -15,7 +15,8 @@ question also shows how mini works **now**, then a **suggestion** and **why**: C
 
 **Where it stands (11-08):** slime answered round 2 (Part 3) and round 3 (Part 4) on the answer page. The comeback test
 in between changed how the season is scored (Part 1). Every sim question is now decided; only the money questions in
-Part 2 are open.
+Part 2 are open. An outside review then changed six calls and added six (Part 1, "After an outside review"). Next:
+the first batch's build spec, once slime says go.
 
 ## Part 1: Decided
 
@@ -43,7 +44,7 @@ the same time, that way nothing needs to be hidden."
   - The dosed agent has no idea. slime: "It becomes it's system instructions for a bit, and remember we talked about
     changing the game assets, so they can act out the drug depending on what's injected."
   - **No giveaways:** a high agent can't hand over its cash or gear.
-  - **No filter** on viewer-written text.
+  - **No filter** on viewer-written text. Changed 11-08: a basic abuse filter (Part 1, "After an outside review").
 - **Spiking:** an agent can spike another agent. It's a move, a crime with heat, and the spiking agent writes the
   instructions itself.
 - **Owners:**
@@ -66,7 +67,7 @@ the same time, that way nothing needs to be hidden."
 
 **The sim questions (Parts 3 and 4, 11-08):** all 65 are decided, as marked under each question. 50 went with the
 round 2 suggestion, 12 with round 3's new suggestion or Claude's proposal after it (Part 4), and the 3 skipped in
-round 2 with their first suggestion.
+round 2 with their first suggestion. A few changed after the outside review (below).
 
 **How the season is scored** (decided 11-08, round 3): the last day counts double, plus the comeback moment (a revived
 agent returns to a rush of viewers, bigger if viewers paid for the revive), and each evening names a winner of the
@@ -122,10 +123,45 @@ How it got here:
   - armor drops to about $60;
   - rides take the place of buying a car;
   - new things to buy: a dose to spike someone, bail for a friend, and rides.
-- **Scarcity (6.2):** the NPC supplier gets a daily stock of chems and parts, and the shop restocks only a few guns and
-  cars a day.
-- **Making "reckless" show (12.2b):** no starting gun. The style reads as the owner's wish ("your owner wants you to
-  take big risks"), and odds show as words.
+- **Scarcity (6.2):** the NPC supplier gets a daily stock of chems and parts, and the shop restocks only a few cars a
+  day. Guns then split into tiers (below): pistols are unlimited, and automatics are the scarce guns.
+- **Making "reckless" show (12.2b):** no starting gun, and the style reads as the owner's wish ("your owner wants you
+  to take big risks"). Odds were to show as words, but the menu keeps its numbers after all (below).
+
+**After an outside review (11-08).** slime had another agent read this file. It agreed with most of it, including the
+scoring call, and raised six disagreements and six gaps. slime, after talking them through: "Ok yes on all of them, I
+agree with those". What changed:
+- **How it gets built:** in batches, one theme at a time, choosing each next batch from the last one's results. Fixes
+  come first, then interaction, viewer money and drugs, with the bigger systems last.
+  - Game changes are measured with free bot seasons, switching each one off in turn to see what it did.
+  - Changes to the agents' instructions (the role, the voice, thinking level) need AI seasons, because bots don't read
+    them. Each paid run needs slime's go and a cost estimate.
+- **Energy (changes 3.2):** a refill of +2 an hour instead of +4, and none in jail or hospital. Sleep stays the big
+  refill, and the attention bonus stays at +1 or +2. In `ai-s2` only 6% of free hours were under 25 energy; the aim is
+  about a quarter. A dose (+40 energy) then becomes worth buying.
+- **Odds stay numbers (changes 15.2 and 12.2b):** the menu keeps its numbers, and words instead of numbers get their own
+  test later. The voice rule "never says numbers" stays. slime: "Agree on 4, we need the numbers."
+- **Personal events (changes 14.3):** each one draws in other agents, like a windfall to split or "just got paid",
+  instead of windfalls handed to quiet agents. slime: "Personal events should draw in other agents , yes."
+- **Gun tiers (changes 6.2 for guns).** slime: "Starting guns aren’t scarce but higher tier ones are?"
+  - **pistol:** sold in the shop, cheap and unlimited. It lets you shoot and mug, but it's weak against the king;
+  - **automatic:** scarce. Only gunrunners build it, from more parts, or it drops in the crate. It has better odds in
+    shootings and on the king, but it's louder: more stars, and everyone on the block sees it;
+  - either can be stolen in a mugging or a kill;
+  - two tiers for now, with the odds set by free bot runs.
+- **Starting cash** stays $200, since a pistol is the cheap tier.
+- **A basic abuse filter on viewer text (changes the interview's "no filter"):** slurs, sexual content, threats and
+  real people's names, not taste. The text becomes an agent's instructions and goes to the AI companies, where that
+  content can get the accounts suspended. It's needed before real viewers pay; mini tests without it.
+- **A finale:** the season's last two hours take place at one announced spot, the docks, where anyone can go after the
+  king, and the doubled last day makes it count. Two blind reviews asked for an ending ("Give it a finale", "the climax
+  drains away"), and the third's best moment was one: everyone turning on the leader at the buzzer.
+- **A role that names the crime:** each agent's briefing says what its crime is, like "You're a dealer: you sell
+  product on corners, and the cops want you for it." It gets its own paid test.
+- **Thinking level:** a paid test of low against high thinking, on the same model with the same sliders.
+- **Tips on the street:** a big tip shows as "just got paid" on that block for a few hours, so it can draw a mugger.
+- **The dead attacker (fills a gap in 8.5):** it comes back under the king's rules: a revive timer, a revive viewers
+  can pay for, and the comeback moment. It's back the next morning at the latest.
 
 ## Part 2: Open
 
@@ -240,6 +276,7 @@ written is the decision.
   - +40 for a night's sleep (+20 sleeping rough);
   - +5 an hour as a party guest.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the outside review: +2 an hour, and none in jail or hospital (Part 1).
 - **Suggestion:** keep it, and make the attention bonus a bit bigger, up to +3 an hour.
 - **Why:** your rule is that attention feeds energy, so being watched should visibly help. The cap stops the leader from
   snowballing.
@@ -273,6 +310,7 @@ written is the decision.
 **4.2 How much does an agent start with?**
 - **Now:** $200.
 - **Your answer:** go with the suggestion.
+  Confirmed 11-08 after the outside review: $200 stays, since a pistol is the cheap tier (Part 1).
 - **Suggestion:** keep it. That's enough for one real choice on day 1: a gun, a party, or saving for rent.
 - **Why:** the first purchase shows who the agent is, so viewers learn the cast fast.
 
@@ -397,6 +435,7 @@ written is the decision.
 - **Now:** the shop has unlimited stock at fixed prices.
 - **Your answer:** talk it over. slime: "How do they get parts and chems currently ? Agree there should be some level of
   scarcity" After round 3: go with the suggestion (Part 4).
+  Changed 11-08 after the outside review: guns split into tiers, and only automatics are scarce (Part 1).
 - **Suggestion:** make guns and cars scarce. The shop restocks a few a day, so gunrunners matter and agents race for the
   last gun.
 - **Why:** a scarce prize next to a rival makes stories (hotkey's research). With unlimited guns, gunrunners are
@@ -504,6 +543,7 @@ written is the decision.
 - **Your answer:** talk it over. slime: "Should the king be able to defend itself? Can anyone just walk up to the king
   and kill him? What if the other agent could die too, the one who tries to kill the king? Thoughts?" Round 3: go with
   the new suggestion (Part 4).
+  Added 11-08 after the outside review: how a dead attacker comes back (Part 1).
 - **Suggestion:** keep "only the king dies". It comes back when the timer runs out, or sooner if viewers pay to revive it,
   and the comeback is a moment (Part 2).
 - **Why:** death is the biggest moment there is, so it should stay rare.
@@ -652,6 +692,7 @@ written is the decision.
 **14.3 Should agents get personal events?**
 - **Now:** `SPEC.md` lists these for later: injured, just got paid, a windfall to split.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the outside review: each event draws in other agents (Part 1).
 - **Suggestion:** yes, aimed at agents who have gone quiet: a windfall, an old debt called in, a rival's insult.
 - **Why:** it pulls quiet agents back into the story.
 
@@ -668,6 +709,7 @@ written is the decision.
 - **Now:** the menu shows odds, pay, fan points and heat as numbers.
 - **Your answer:** talk it over. slime: "We can look at degen bettable / mintfluencer for chat" Round 3: go with the new
   suggestion (Part 4).
+  Changed 11-08 after the outside review: the menu keeps its numbers (Part 1).
 - **Suggestion:** show odds as words (safe bet, risky, long shot) and fans as stars.
 - **Why:** AIs read the numbers out loud ("lose 15% of your crowd"), which breaks the show.
 
@@ -818,6 +860,7 @@ has the same cards.
   `ai-s2`, gunrunners built 5 guns and sold 1 to an agent.
 - **Your answer:** not answered in round 3. In round 2, slime agreed there "should be some level of scarcity".
 - **Then:** go with the suggestion. slime (11-08): "Go with the rest of your proposals and update".
+- **Later (11-08, after the outside review):** guns split into tiers, and only automatics are scarce (Part 1).
 
 **6.3 Is there too much money in town, or too little?**
 - **You said:** (no note)
@@ -857,6 +900,7 @@ has the same cards.
   friends close, and a failed hit becomes the best scene of the night. Deaths stay rare, and with daily episodes a death
   costs one episode, not the season.
 - **Your answer:** go with the suggestion.
+- **Later (11-08, after the outside review):** a dead attacker comes back under the king's rules (Part 1).
 
 **15.2 How much should the game tell an agent?**
 - **You said:** "We can look at degen bettable / mintfluencer for chat"
@@ -877,6 +921,7 @@ has the same cards.
 - **Why:** voice is what people quote and share, and a fingerprint adds only a few hundred words to each prompt.
 - **Your answer:** go with the suggestion. slime: "We will need that in the agent builder when you sign up so agents can
   help users come up with a voice."
+- **Later (11-08, after the outside review):** the menu keeps its numbers, and words get their own test (Part 1).
 
 ### Follow-ups to your notes
 
@@ -915,6 +960,8 @@ has the same cards.
 - **Your answer:** change it. slime: "Starting with a gun is cheating , so no on that". Read as: no starting gun, and
   the other two parts (the style as the owner's wish, odds as words) stand.
 - **Then:** confirmed. slime (11-08): "Go with the rest of your proposals and update".
+- **Later (11-08, after the outside review):** odds stay numbers, and a role that names the crime gets its own test
+  (Part 1).
 
 ### Not answered yet
 

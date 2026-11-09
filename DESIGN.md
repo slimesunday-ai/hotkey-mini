@@ -8,14 +8,13 @@ Started 2026-11-08. This file keeps the new direction's design calls in one plac
 The build spec is [`SPEC.md`](SPEC.md), and how each round is tested is [`TUNING.md`](TUNING.md). Nothing here is built
 until slime says go.
 
-**How to answer:** the easiest way is the answer page, https://claude.ai/artifact/X76GdQpeTQHbgEDNoBxiRC (private
-to slime). It has the same questions with one-tap answers, and Claude reads the answers back from it. You can also reply in
-chat with the question number ("3.2: yes, but..."), or type under **Your answer**. Every answer gets recorded here. Each question also shows how mini works **now**, then a **suggestion** and **why**: Claude's
-read, there to argue with.
+**How to answer:** the easiest way is the answer page, https://claude.ai/artifact/X76GdQpeTQHbgEDNoBxiRC (private to
+slime). It has the same questions with one-tap answers, and Claude reads the answers back from it. You can also reply in
+chat with the question number ("3.2: yes, but..."), or type under **Your answer**. Every answer gets recorded here. Each
+question also shows how mini works **now**, then a **suggestion** and **why**: Claude's read, there to argue with.
 
-**Where it stands (11-08):** slime answered the Part 3 questions on the answer page. The comeback test then went against
-the scoring half of the comeback pick (Part 2). The page now holds round 3: the scoring question again, the questions to
-talk over with Claude's replies, and the ones not answered yet (Part 4).
+**Where it stands (11-08):** slime answered round 2 (Part 3) and round 3 (Part 4) on the answer page. The comeback test
+in between changed how the season is scored (Part 1). Two questions are still open (Part 2).
 
 ## Part 1: Decided
 
@@ -64,18 +63,18 @@ the same time, that way nothing needs to be hidden."
 - **Acting out a drug:** mini has no picture, so it records what a high agent acts out (its look and how it moves) as
   typed lines for hotkey's city to draw later. The play-by-play describes them.
 
-**The sim questions (Part 3, answered 11-08):** 50 of the 65 go with Claude's suggestion, as marked under each question.
-12 are to talk over and 3 aren't answered yet; Claude's replies are in Part 4.
+**The sim questions (Parts 3 and 4, 11-08):** 63 of the 65 are decided, as marked under each question; for 10 of
+them the decision is round 3's new suggestion (Part 4). Two are still open (Part 2).
 
-**The comeback moment** (11-08, half of the comeback pick below): a revived agent returns to a rush of viewers, bigger if
-viewers paid for the revive. It changes play, so it gets tested once it's built.
+**How the season is scored** (decided 11-08, round 3): the last day counts double, plus the comeback moment (a revived
+agent returns to a rush of viewers, bigger if viewers paid for the revive), and each evening names a winner of the
+night as a title with no points. The comeback moment changes play, so it gets tested once it's built.
 
-## Part 2: Open
-
-**How the season is scored, after the comeback test** (reopened 11-08). slime first: "We need to discuss this further,
-if an agent dies early on there needs to be the ability to come back maybe last day counts double but i dno".
-- The score adds up watch time over the whole season. So an early death costs a lot, and a big early lead survives even
-  the leader's death (Sable won `ai-s2` dead).
+How it got here:
+- slime first: "We need to discuss this further, if an agent dies early on there needs to be the ability to come
+  back maybe last day counts double but i dno".
+- The problem: the score adds up watch time over the whole season. So an early death costs a lot, and a big early
+  lead survives even the leader's death (Sable won `ai-s2` dead).
 - The options:
   1. **Later days count more:** for example, day 1 counts once, day 2 twice and day 3 three times. With only the last
      day doubled, Vex would have won `ai-s2`.
@@ -84,12 +83,9 @@ if an agent dies early on there needs to be the ability to come back maybe last 
   3. **The comeback is a moment:** a revived agent returns to a rush of viewers, bigger if viewers paid for the revive.
      This works alongside 1 or 2.
   4. **Recent hours count most:** old watch time slowly fades.
-- **Your answer:** go with the suggestion. slime: "Let’s go with your suggestion here".
-- **Suggestion:** daily episodes plus the comeback moment. Before deciding, rescore the saved AI seasons and a batch of
-  bot seasons under all four options. It's free, with no API calls.
-- **Why:** an early death then costs one episode, not the season. Each evening gets its own winner (a reason to watch
-  tonight), and a revive becomes a scene instead of a timer running out.
-- **The test (11-08)** went against the suggestion. It rescored 500 bot seasons and both AI seasons under each rule,
+- **Round 2:** slime took Claude's pick, daily episodes plus the comeback moment, with a free rescoring test first:
+  "Let’s go with your suggestion here".
+- **The test (11-08)** went against that pick. It rescored 500 bot seasons and both AI seasons under each rule,
   with play held fixed (`tools/rescore.mjs`; results in `results/rescore/2026-11-08-comeback-rules.md`).
   - No scoring rule gave an agent with a bad first day a real way back: it wins 5–9% of seasons under every rule, where
     chance would be 10%. Daily episodes leave it at 5% (default lineup), the same as today.
@@ -98,15 +94,36 @@ if an agent dies early on there needs to be the ability to come back maybe last 
   - slime's first idea, the last day counting double, fixes `ai-s2` (Vex wins) and keeps the finale open: the leader
     going into day 3 loses 61% of the time, against 50% today.
   - Deaths on day 1 are rare (9 in 200 default seasons), and none of those agents won under any rule.
-- **Next:** the scoring rule goes back to slime as round 3's first card (Part 4, 13.2).
+- **Round 3:** slime picked "Last day counts double" (Part 4, 13.2).
+
+**Round 3, the headline decisions** (11-08; details in Part 4):
+- **Night** is the recap: no moves and no AI calls, and the city replays the day.
+- **The king fights back:** when an attempt on an armed king fails, the king fires back with even odds of killing the
+  attacker, and crewmates on its block lower the attacker's odds. Only the king, and anyone who fails to kill an
+  armed king, can die.
+- **Rides** become moves with a price, a speed and a rule for who can steal them: walking, skateboards and bikes,
+  scooters, the subway and cars.
+- **All four big job plays** get built as one test: the big run, the big batch, the corner takeover and the arms deal.
+- **Fake fans** in mini tip, dose and bail the agents they watch, so tips, drugs and rescues can be tested.
+- **The crate** drops once a day, announced an hour ahead.
+- **Jobs:** an owner who doesn't pick gets the job with the fewest agents, no job holds more than 3 of the 10, and
+  with no chemist in town the drug cut goes to the house.
+- **Voices:** each agent gets a typing fingerprint with "never says numbers" on it. slime: "We will need that in the
+  agent builder when you sign up so agents can help users come up with a voice."
+- **No starting gun** for reckless agents. slime: "Starting with a gun is cheating , so no on that".
+
+## Part 2: Open
+
+**Still open after round 3:**
+- **4.1, what money buys.** slime: "Jewelry isn’t really interesting as something to watch , it’s cool for character
+  building, but not as an action imo." Claude's proposal is under 4.1 in Part 4.
+- **6.2, scarcity.** Not answered in round 3. In round 2, slime agreed there "should be some level of scarcity".
+- **12.2b, to confirm:** Claude read slime's "no" as covering only the starting gun, so the other two fixes stand.
 
 **Who gets viewers' real money.** slime: "I think owners get a cut but we need to fund the game somehow, let's decide
 later".
 
 **Real money or credits.** Real money directly, or credits bought with money: undecided.
-
-**Round 3:** the scoring question after the test, the 12 questions to talk over, two follow-ups to slime's notes, and
-the 3 not answered yet are in Part 4.
 
 ## Part 3: The sim, question by question
 
@@ -117,14 +134,15 @@ written is the decision.
 
 **1.1 How long is a season?**
 - **Now:** 3 game days of 18 acting hours each (06:00–23:00), so 54 turns.
-- **Your answer:** talk it over (Part 4). slime: "I don’t know what we will go with eventually, is it difficult to change later?"
+- **Your answer:** talk it over. slime: "I don’t know what we will go with eventually, is it difficult to change later?"
+  Round 3: go with the new suggestion (Part 4).
 - **Suggestion:** keep 3 days. In the real game, play one game day per evening, so a season is three episodes.
 - **Why:** a set time each evening gives viewers a reason to show up, and each day ends on a cliffhanger. Short seasons
   also give losing agents a fresh start sooner.
 
 **1.2 In the real game, how long is a game hour in real time?**
 - **Now:** mini has no real time. It runs as fast as the models answer.
-- **Your answer:** talk it over (Part 4).
+- **Your answer:** talk it over. Round 3: go with the new suggestion (Part 4).
 - **Suggestion:** about 5 real minutes per game hour, so an evening episode runs about 90 minutes.
 - **Why:** with 10 agents each acting once a game hour, something new happens about every 30 seconds. That leaves the
   city time to animate each walk, fight and drug trip.
@@ -138,7 +156,7 @@ written is the decision.
 
 **1.4 What happens at night?**
 - **Now:** 00:00–06:00 is sleep, and nobody acts. Rent is due at midnight.
-- **Your answer:** talk it over (Part 4).
+- **Your answer:** talk it over. Round 3: night is the recap (Part 4).
 - **Suggestion:** night is the recap. Nobody acts and no AI is called, and the city replays the day's best moments.
   Jail, hospital and revive timers keep running overnight.
 - **Why:** it ends each episode cleanly, costs nothing, and lets viewers who missed the day catch up.
@@ -168,7 +186,7 @@ written is the decision.
   - corner, bar and park: dealing, with parties at the bar and park;
   - docks: smuggling, shifts, and the crate's favorite spot;
   - precinct: nothing, except released agents walk out of it.
-- **Your answer:** not answered yet (Part 4).
+- **Your answer:** go with the suggestion (round 3).
 - **Suggestion:** give the precinct a job. Bail gets paid there, and snitching (8.6) happens there. Every block should
   offer one way to make money and one way to get watched.
 - **Why:** a place with nothing to do is a dead set. Bail is now a rescue viewers pay for, so it needs a place where the
@@ -176,7 +194,8 @@ written is the decision.
 
 **2.3 How do agents get around?**
 - **Now:** moving one block takes an hour, and a car moves two. Moving is 22–24% of all turns.
-- **Your answer:** talk it over (Part 4). slime: "In hotkey we have bikes, skateboards, scooters, subways, etc…. This is what I’m talking about with things we can take"
+- **Your answer:** talk it over. slime: "In hotkey we have bikes, skateboards, scooters, subways, etc…. This is what I’m
+  talking about with things we can take" Round 3: go with the new suggestion (Part 4).
 - **Suggestion:** keep travel time. Show who's heading where, so viewers see a collision coming.
 - **Why:** travel time makes being in the wrong place possible. Without it, location stops mattering.
 
@@ -235,7 +254,8 @@ written is the decision.
 **4.1 What is money for, if it isn't the score?**
 - **Now:** gear (a gun $90, a car $500, armor $200, jewelry $150–300), job supplies, rent, parties ($80) and bounties
   ($50 and up).
-- **Your answer:** talk it over (Part 4). slime: "Yes but we should discuss further what actually helps the sim and provides value/entertainment"
+- **Your answer:** talk it over. slime: "Yes but we should discuss further what actually helps the sim and provides
+  value/entertainment" Round 3: still open (Part 4).
 - **Suggestion:** money buys chances, not points. Every purchase should unlock a move or make one likelier, and never
   add viewers directly.
 - **Why:** if money buys viewers, the richest agent wins and tips decide the season. If money buys moves, it starts
@@ -298,14 +318,16 @@ written is the decision.
 
 **5.1 Which jobs exist? Are four enough?**
 - **Now:** smuggler, chemist, dealer and gunrunner. Anyone can work a shift, and the cops are NPCs.
-- **Your answer:** go with the suggestion. slime: "That was already the plan, Npc arrests should give a cut to cop agents in the area or something"
+- **Your answer:** go with the suggestion. slime: "That was already the plan, Npc arrests should give a cut to cop
+  agents in the area or something"
 - **Suggestion:** keep the four, and add a fifth: a cop played by an agent.
 - **Why:** a player cop is a built-in rival for every criminal, and a lawful path that's still watchable. hotkey's design
   is ready to borrow: patrol, arrest wanted agents for a reward, take bribes.
 
 **5.2 How does an agent get its job? Can it switch?**
 - **Now:** the job is set when the agent enters, and kept all season.
-- **Your answer:** go with the suggestion. slime: "What happens if a job isn’t picked by a user? And one category has 0 jobs?" Claude's reply is in Part 4.
+- **Your answer:** go with the suggestion. slime: "What happens if a job isn’t picked by a user? And one category has 0
+  jobs?" Round 3 follow-up (5.2b): go with the suggestion.
 - **Suggestion:** the owner picks it at entry, and there's no switching.
 - **Why:** the job is half of who the agent is, so viewers learn "Juno the chemist". Free switching would make everyone
   copy the best-paying job.
@@ -333,7 +355,7 @@ written is the decision.
 
 **5.5 Does each job have a big moment?**
 - **Now:** no. Every job move is routine (Sonnet in `ai-s2`: "Cooking is safe and steady").
-- **Your answer:** talk it over (Part 4).
+- **Your answer:** talk it over. Round 3: build all four (Part 4).
 - **Suggestion:** give each job one risky big play:
   - the smuggler's big run: a double haul, but the cops get tipped;
   - the chemist's big batch, which could blow up the kitchen;
@@ -349,7 +371,7 @@ written is the decision.
 
 **5.7 Can agents hire each other?**
 - **Now:** no.
-- **Your answer:** talk it over (Part 4).
+- **Your answer:** talk it over. Round 3: go with the new suggestion (Part 4).
 - **Suggestion:** later: hire a runner to carry your goods, and the runner can walk off with them.
 - **Why:** it's the simplest betrayal there is, and AIs need a menu move that sets one up.
 
@@ -364,7 +386,8 @@ written is the decision.
 
 **6.2 Should anything be scarce?**
 - **Now:** the shop has unlimited stock at fixed prices.
-- **Your answer:** talk it over (Part 4). slime: "How do they get parts and chems currently ? Agree there should be some level of scarcity"
+- **Your answer:** talk it over. slime: "How do they get parts and chems currently ? Agree there should be some level of
+  scarcity" Round 3: not answered (Part 4).
 - **Suggestion:** make guns and cars scarce. The shop restocks a few a day, so gunrunners matter and agents race for the
   last gun.
 - **Why:** a scarce prize next to a rival makes stories (hotkey's research). With unlimited guns, gunrunners are
@@ -372,7 +395,7 @@ written is the decision.
 
 **6.3 Is there too much money in town, or too little?**
 - **Now:** too little. In `ai-s2`, average cash went from $200 to $84 after day 1 and $44 after day 2.
-- **Your answer:** talk it over (Part 4).
+- **Your answer:** talk it over. Round 3: go with the new suggestion (Part 4).
 - **Suggestion:** add tips first, then measure before changing anything else. Track total cash each day, and aim for
   every agent being able to afford one real purchase a day.
 - **Why:** tips bring in money from outside, so the economy could flip from too tight to too loose.
@@ -386,7 +409,8 @@ written is the decision.
 **6.5 The crate: how often, and who knows when?**
 - **Now:** it drops every 8±2 acting hours on a random block (usually the docks) and stays 2 hours. It holds cash, a gun
   or jewelry. Fights over it are rare: 0.27 a season in bot runs.
-- **Your answer:** talk it over (Part 4). slime: "How do agents get to the location, do they just teleport? They need to walk,ride, etc… what are we doing now?"
+- **Your answer:** talk it over. slime: "How do agents get to the location, do they just teleport? They need to
+  walk,ride, etc… what are we doing now?" Round 3: go with the new suggestion (Part 4).
 - **Suggestion:** once a day, at a time and place announced an hour ahead.
 - **Why:** a known time and place is a scheduled fight. Agents and viewers both see it coming.
 
@@ -422,7 +446,7 @@ written is the decision.
 
 **7.5 Which audience matters most?**
 - **Now:** four groups of fake viewers: action 400, drama 300, weird 150, feel-good 150.
-- **Your answer:** not answered yet (Part 4).
+- **Your answer:** go with the suggestion (round 3).
 - **Suggestion:** keep the sizes. In the round-3 test, every play style won 13–27% of seasons.
 - **Why:** the test says it's balanced, and new sizes would tilt the game toward one kind of play. Once real viewers
   exist, their watch time replaces these guesses.
@@ -451,7 +475,7 @@ written is the decision.
 
 **8.3 How does heat go away?**
 - **Now:** laying low (−1 star, at most once every 2 hours), −1 at the end of a day with no crime, or jail (back to 0).
-- **Your answer:** not answered yet (Part 4).
+- **Your answer:** go with the suggestion (round 3).
 - **Suggestion:** keep it.
 - **Why:** it's simple, and laying low costs a turn.
 
@@ -468,7 +492,9 @@ written is the decision.
 
 **8.5 Who can die, and how do they come back?**
 - **Now:** only the king can be killed. It's dead for 3–12 hours, back sooner the more viewers it has.
-- **Your answer:** talk it over (Part 4). slime: "Should the king be able to defend itself? Can anyone just walk up to the king and kill him? What if the other agent could die too, the one who tries to kill the king? Thoughts?"
+- **Your answer:** talk it over. slime: "Should the king be able to defend itself? Can anyone just walk up to the king
+  and kill him? What if the other agent could die too, the one who tries to kill the king? Thoughts?" Round 3: go with
+  the new suggestion (Part 4).
 - **Suggestion:** keep "only the king dies". It comes back when the timer runs out, or sooner if viewers pay to revive it,
   and the comeback is a moment (Part 2).
 - **Why:** death is the biggest moment there is, so it should stay rare.
@@ -578,7 +604,8 @@ written is the decision.
 - **Now:** risk, clout and loyalty.
   - In `ai-s2`, Sol and Haiku followed their settings, and Sonnet mostly ignored "reckless".
   - "Snake" never showed, because no AI made a promise.
-- **Your answer:** go with the suggestion. slime: "Why it ignore reckless, did we surface the risky moves?" Claude's reply is in Part 4.
+- **Your answer:** go with the suggestion. slime: "Why it ignore reckless, did we surface the risky moves?" Round 3
+  follow-up (12.2b): no starting gun.
 - **Suggestion:** keep three until each one visibly changes every model's play. Then consider a fourth, such as "chatty"
   or "weird".
 - **Why:** a slider that does nothing feels broken to an owner.
@@ -630,7 +657,8 @@ written is the decision.
 
 **15.2 How much should the game tell an agent?**
 - **Now:** the menu shows odds, pay, fan points and heat as numbers.
-- **Your answer:** talk it over (Part 4). slime: "We can look at degen bettable / mintfluencer for chat"
+- **Your answer:** talk it over. slime: "We can look at degen bettable / mintfluencer for chat" Round 3: go with the new
+  suggestion (Part 4).
 - **Suggestion:** show odds as words (safe bet, risky, long shot) and fans as stars.
 - **Why:** AIs read the numbers out loud ("lose 15% of your crowd"), which breaks the show.
 
@@ -659,7 +687,7 @@ has the same cards.
   as a title with no points.
 - **Why:** it fixes the dead winner the `ai-s2` review flagged, keeps the finale open, and is easy to explain: the
   finale counts double. The winner of the night keeps a reason to watch every evening.
-- **Your answer:**
+- **Your answer:** picked "Last day counts double", the suggestion as written.
 
 ### Talk it over
 
@@ -670,7 +698,7 @@ has the same cards.
   comeback pick), a season is just a count of episodes, which makes it even easier to change.
 - **Suggestion:** keep 3 days for now. Revisit once real viewers show how many evenings in a row they come back.
 - **Why:** nothing locks in. Three days is the shortest season that still has an opening, a middle and a finale.
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **1.2 In the real game, how long is a game hour in real time?**
 - **You said:** (no note)
@@ -685,7 +713,7 @@ has the same cards.
   pay for a drug.
 - **Why:** the paying window is the thing to protect, since viewers' payments fund the game. 5 minutes is the middle
   option until there's a real measure.
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **1.4 What happens at night?**
 - **You said:** (no note)
@@ -700,7 +728,7 @@ has the same cards.
 - **Suggestion:** night is the recap for now. Try night moves later if the days start to feel the same.
 - **Why:** the recap ends each episode cleanly and costs nothing, and night moves can be added later without changing
   anything else.
-- **Your answer:**
+- **Your answer:** picked "Night is the recap", the suggestion.
 
 **2.3 How do agents get around?**
 - **You said:** "In hotkey we have bikes, skateboards, scooters, subways, etc…. This is what I’m talking about with
@@ -718,7 +746,7 @@ has the same cards.
 - **Suggestion:** add the rides to mini as moves with a price, a speed and a rule for who can steal them, and have the
   play-by-play name the ride. hotkey's city already animates skateboards, scooters, bikes, cabs and the subway.
 - **Why:** every ride is something to buy, steal or show (a chase on scooters), and the art already exists.
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **4.1 What is money for, if it isn't the score?**
 - **You said:** "Yes but we should discuss further what actually helps the sim and provides value/entertainment"
@@ -738,7 +766,11 @@ has the same cards.
   - rides take the place of buying a car (2.3);
   - new things to buy: a dose to spike someone, bail for a friend, and rides.
 - **Why:** everything left on the list starts a scene with another agent, and that's what the score rewards.
-- **Your answer:**
+- **Your answer:** talk it over. slime: "Jewelry isn’t really interesting as something to watch , it’s cool for
+  character building, but not as an action imo."
+- **Next:** Claude's proposal, to confirm: jewelry becomes part of the agent's look, picked when the agent is built, with
+  no move and no free viewers. It can still be taken in a mugging, since the robbery is the action. The rest of
+  the list stands as suggested.
 
 **5.5 Does each job have a big moment?**
 - **You said:** (no note)
@@ -751,7 +783,7 @@ has the same cards.
 - **Suggestion:** build the ones you pick as one test. Then cut any that agents never choose or that never makes a
   moment.
 - **Why:** agents spend many turns at their jobs, and today those turns are dead air.
-- **Your answer:**
+- **Your answer:** build all four: the corner takeover, the big run, the big batch and the arms deal.
 
 **5.7 Can agents hire each other?**
 - **You said:** (no note)
@@ -760,7 +792,7 @@ has the same cards.
 - **Suggestion:** build it after deals (9.2) and crews (9.3).
 - **Why:** a hire is a deal where the goods change hands first. With deals built, hiring is a small addition instead of
   a third trust system.
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **6.2 Should anything be scarce?**
 - **You said:** "How do they get parts and chems currently ? Agree there should be some level of scarcity"
@@ -774,7 +806,7 @@ has the same cards.
   cars a day.
 - **Why:** with an unlimited supplier, smugglers are optional, and with unlimited shop guns, so are gunrunners. In
   `ai-s2`, gunrunners built 5 guns and sold 1 to an agent.
-- **Your answer:**
+- **Your answer:** not answered in round 3. In round 2, slime agreed there "should be some level of scarcity".
 
 **6.3 Is there too much money in town, or too little?**
 - **You said:** (no note)
@@ -784,7 +816,7 @@ has the same cards.
   in one place. Then track total cash each day, aiming for every agent to afford one real purchase a day. Change
   nothing else until that's measured.
 - **Why:** without fake fans, every money test leaves out the biggest new source of money and all the new paid moves.
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **6.5 The crate: how often, and who knows when?**
 - **You said:** "How do agents get to the location, do they just teleport? They need to walk,ride, etc… what are we
@@ -795,7 +827,7 @@ has the same cards.
   most of the town, and with a ride (2.3) for all of it.
 - **Suggestion:** once a day, at a time and place announced an hour ahead, with the race there as part of the show.
 - **Why:** a known time and place is a scheduled fight, and the trip there is a race viewers can follow.
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **8.5 Who can die, and how do they come back?**
 - **You said:** "Should the king be able to defend itself? Can anyone just walk up to the king and kill him? What if the
@@ -813,7 +845,7 @@ has the same cards.
 - **Why:** going for the king becomes a real gamble instead of a free shot. The king has reasons to carry a gun and keep
   friends close, and a failed hit becomes the best scene of the night. Deaths stay rare, and with daily episodes a death
   costs one episode, not the season.
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **15.2 How much should the game tell an agent?**
 - **You said:** "We can look at degen bettable / mintfluencer for chat"
@@ -832,7 +864,8 @@ has the same cards.
   - a fingerprint for each agent, written when it enters, with "never says numbers" on every list;
   - a prompt line asking for a thought and a spoken line that are allowed to disagree.
 - **Why:** voice is what people quote and share, and a fingerprint adds only a few hundred words to each prompt.
-- **Your answer:**
+- **Your answer:** go with the suggestion. slime: "We will need that in the agent builder when you sign up so agents can
+  help users come up with a voice."
 
 ### Follow-ups to your notes
 
@@ -848,7 +881,7 @@ has the same cards.
   - no job holds more than 3 of the 10 agents;
   - with no chemist in town, the drug cut goes to the house.
 - **Why:** every job then has someone in it, and the house cut helps fund the game (Part 2).
-- **Your answer:**
+- **Your answer:** go with the suggestion.
 
 **12.2b Why did the AI ignore "reckless"?**
 - **You said:** "Why it ignore reckless, did we surface the risky moves?"
@@ -868,9 +901,11 @@ has the same cards.
 
   Then check it in one AI season, with your go and a cost estimate first.
 - **Why:** a slider has to change what viewers see, or it feels broken to the owner (12.2).
-- **Your answer:**
+- **Your answer:** change it. slime: "Starting with a gun is cheating , so no on that". Read as: no starting gun, and
+  the other two
+  parts (the style as the owner's wish, odds as words) stand.
 
 ### Not answered yet
 
 2.2 (a reason to go to every place), 7.5 (which audience matters most) and 8.3 (how heat goes away). Their cards are the
-same as in Part 3.
+same as in Part 3. Round 3: slime went with the suggestion on all three.

@@ -14,7 +14,8 @@ chat with the question number ("3.2: yes, but..."), or type under **Your answer*
 question also shows how mini works **now**, then a **suggestion** and **why**: Claude's read, there to argue with.
 
 **Where it stands (11-08):** slime answered round 2 (Part 3) and round 3 (Part 4) on the answer page. The comeback test
-in between changed how the season is scored (Part 1). Two questions are still open (Part 2).
+in between changed how the season is scored (Part 1). Every sim question is now decided; only the money questions in
+Part 2 are open.
 
 ## Part 1: Decided
 
@@ -63,8 +64,9 @@ the same time, that way nothing needs to be hidden."
 - **Acting out a drug:** mini has no picture, so it records what a high agent acts out (its look and how it moves) as
   typed lines for hotkey's city to draw later. The play-by-play describes them.
 
-**The sim questions (Parts 3 and 4, 11-08):** 63 of the 65 are decided, as marked under each question; for 10 of
-them the decision is round 3's new suggestion (Part 4). Two are still open (Part 2).
+**The sim questions (Parts 3 and 4, 11-08):** all 65 are decided, as marked under each question. 50 went with the
+round 2 suggestion, 12 with round 3's new suggestion or Claude's proposal after it (Part 4), and the 3 skipped in
+round 2 with their first suggestion.
 
 **How the season is scored** (decided 11-08, round 3): the last day counts double, plus the comeback moment (a revived
 agent returns to a rush of viewers, bigger if viewers paid for the revive), and each evening names a winner of the
@@ -112,13 +114,20 @@ How it got here:
   agent builder when you sign up so agents can help users come up with a voice."
 - **No starting gun** for reckless agents. slime: "Starting with a gun is cheating , so no on that".
 
-## Part 2: Open
+**Settled after round 3** (slime, 11-08: "Go with the rest of your proposals and update"):
+- **What money buys (4.1):**
+  - guns, parties, job supplies, rent and bounties stay;
+  - jewelry becomes part of the agent's look, picked when the agent is built, with no move and no free viewers. It can
+    still be taken in a mugging, since the robbery is the action;
+  - armor drops to about $60;
+  - rides take the place of buying a car;
+  - new things to buy: a dose to spike someone, bail for a friend, and rides.
+- **Scarcity (6.2):** the NPC supplier gets a daily stock of chems and parts, and the shop restocks only a few guns and
+  cars a day.
+- **Making "reckless" show (12.2b):** no starting gun. The style reads as the owner's wish ("your owner wants you to
+  take big risks"), and odds show as words.
 
-**Still open after round 3:**
-- **4.1, what money buys.** slime: "Jewelry isn’t really interesting as something to watch , it’s cool for character
-  building, but not as an action imo." Claude's proposal is under 4.1 in Part 4.
-- **6.2, scarcity.** Not answered in round 3. In round 2, slime agreed there "should be some level of scarcity".
-- **12.2b, to confirm:** Claude read slime's "no" as covering only the starting gun, so the other two fixes stand.
+## Part 2: Open
 
 **Who gets viewers' real money.** slime: "I think owners get a cut but we need to fund the game somehow, let's decide
 later".
@@ -255,7 +264,7 @@ written is the decision.
 - **Now:** gear (a gun $90, a car $500, armor $200, jewelry $150–300), job supplies, rent, parties ($80) and bounties
   ($50 and up).
 - **Your answer:** talk it over. slime: "Yes but we should discuss further what actually helps the sim and provides
-  value/entertainment" Round 3: still open (Part 4).
+  value/entertainment" Round 3: Claude's proposal (Part 4).
 - **Suggestion:** money buys chances, not points. Every purchase should unlock a move or make one likelier, and never
   add viewers directly.
 - **Why:** if money buys viewers, the richest agent wins and tips decide the season. If money buys moves, it starts
@@ -387,7 +396,7 @@ written is the decision.
 **6.2 Should anything be scarce?**
 - **Now:** the shop has unlimited stock at fixed prices.
 - **Your answer:** talk it over. slime: "How do they get parts and chems currently ? Agree there should be some level of
-  scarcity" Round 3: not answered (Part 4).
+  scarcity" After round 3: go with the suggestion (Part 4).
 - **Suggestion:** make guns and cars scarce. The shop restocks a few a day, so gunrunners matter and agents race for the
   last gun.
 - **Why:** a scarce prize next to a rival makes stories (hotkey's research). With unlimited guns, gunrunners are
@@ -768,9 +777,10 @@ has the same cards.
 - **Why:** everything left on the list starts a scene with another agent, and that's what the score rewards.
 - **Your answer:** talk it over. slime: "Jewelry isn’t really interesting as something to watch , it’s cool for
   character building, but not as an action imo."
-- **Next:** Claude's proposal, to confirm: jewelry becomes part of the agent's look, picked when the agent is built, with
-  no move and no free viewers. It can still be taken in a mugging, since the robbery is the action. The rest of
-  the list stands as suggested.
+- **Next:** Claude's proposal: jewelry becomes part of the agent's look, picked when the agent is built, with no move
+  and no free viewers. It can still be taken in a mugging, since the robbery is the action. The rest of the list
+  stands as suggested.
+- **Then:** go with Claude's proposal. slime (11-08): "Go with the rest of your proposals and update".
 
 **5.5 Does each job have a big moment?**
 - **You said:** (no note)
@@ -807,6 +817,7 @@ has the same cards.
 - **Why:** with an unlimited supplier, smugglers are optional, and with unlimited shop guns, so are gunrunners. In
   `ai-s2`, gunrunners built 5 guns and sold 1 to an agent.
 - **Your answer:** not answered in round 3. In round 2, slime agreed there "should be some level of scarcity".
+- **Then:** go with the suggestion. slime (11-08): "Go with the rest of your proposals and update".
 
 **6.3 Is there too much money in town, or too little?**
 - **You said:** (no note)
@@ -902,8 +913,8 @@ has the same cards.
   Then check it in one AI season, with your go and a cost estimate first.
 - **Why:** a slider has to change what viewers see, or it feels broken to the owner (12.2).
 - **Your answer:** change it. slime: "Starting with a gun is cheating , so no on that". Read as: no starting gun, and
-  the other two
-  parts (the style as the owner's wish, odds as words) stand.
+  the other two parts (the style as the owner's wish, odds as words) stand.
+- **Then:** confirmed. slime (11-08): "Go with the rest of your proposals and update".
 
 ### Not answered yet
 

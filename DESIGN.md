@@ -15,8 +15,9 @@ question also shows how mini works **now**, then a **suggestion** and **why**: C
 
 **Where it stands (11-08):** slime answered round 2 (Part 3) and round 3 (Part 4) on the answer page. The comeback test
 in between changed how the season is scored (Part 1). Every sim question is now decided; only the money questions in
-Part 2 are open. An outside review then changed six calls and added six (Part 1, "After an outside review"). Next:
-the first batch's build spec, once slime says go.
+Part 2 are open. An outside review then changed six calls and added six (Part 1, "After an outside review"). A
+research comparison added the medic and the reporter and more (Part 1, "After the research comparison"); peaceful
+conflict is open (Part 2). Next: the first batch's build spec, once slime says go.
 
 ## Part 1: Decided
 
@@ -155,7 +156,7 @@ agree with those". What changed:
   - gunrunners build pistols from 2 parts ($40–50) and sell them under the shop, around $70–100;
   - the menu's usual gun price drops below the shop's, so sellers price to sell;
   - automatics take more parts, so when parts run short a gunrunner picks two pistols now or one automatic;
-  - sales happen face to face (5.3), so each one is a scene a robber can crash.
+  - sales go through the market board, and the city shows the handover as a scene (changed 11-08, below).
 
   Why: in `ai-s2` the menu's usual gun price was $105, above the shop's $90. Every gun listing sat at $106–116, buyers
   went to the shop, and unsold guns went to the NPC buyer for $57–60. Free bot runs set the final prices.
@@ -173,7 +174,94 @@ agree with those". What changed:
 - **The dead attacker (fills a gap in 8.5):** it comes back under the king's rules: a revive timer, a revive viewers
   can pay for, and the comeback moment. It's back the next morning at the latest.
 
+**After the research comparison (11-08).** Nine read-only agents compared this file with hotkey's research folder
+and with degen-bettable, degen, mintfluencer and hotkey's own runs. What they found, with sources, is in
+`results/reviews/2026-11-08-research-comparison.md`. The main lessons:
+- rules move AI agents, and wording mostly doesn't;
+- AIs don't start relationships on their own;
+- agents trade when the game holds the goods.
+
+slime: "Agree on all your points on everything, can add it all. Just don't include the test in real people stuff."
+Claude then checked each addition against the 11-06 loop: max entertainment, agents playing for attention, and
+violent, weird and peaceful play all viable. That changed three additions, dropped one and parked others:
+- **Jobs.** slime: "I think medic, and reporter, and we keep cop as is".
+  - **medic** (built first): runs the hospital. Patients pay to get out sooner, the medic takes a cut of viewers'
+    revive payments the way a chemist does of drugs, and it chooses who to save;
+  - **reporter** (built second): publishes what other agents can't see, like a plan, a stash or who snitched. The
+    details are still to design;
+  - the cop stays as planned (5.1).
+- **Work:** the generic shift becomes gigs named for each place. Some are honest (busking at the park, unloading
+  boats at the docks) and some are petty crime (shoplifting at the market, rolling drunks at the bar), so peaceful
+  play keeps a living. A later batch.
+- **Pressure:** playing safe costs more each day, as rent rises and the cops sharpen through the season. Honest gigs
+  and tips stop it from making crime the only answer.
+- **Agents:**
+  - the scripted regulars open the first promises and grudges on day 1. Nothing is invented: they are agents too, and
+    in `ai-s2` every promise came from one of them;
+  - every agent gets a one-line standings summary (who's king, who's ahead), tested in one AI season;
+  - thoughts are prompted to show the scheme (who you're using, what you're bluffing, the fear behind the
+    confidence), in plain words, with the voice in the spoken line;
+  - the role that names the crime and the thinking-level test run late and cheap.
+- **Trading:**
+  - goods change hands through the market board, where the game holds them until a buyer pays. Nobody has to meet,
+    and the city shows the handover as a scene. In hotkey, face-to-face offers settled 1.5% of the time, against 53%
+    for deals the game held;
+  - standing orders: an agent sets a routine trade once ("sell my pistols at $80", "buy 2 chems a day"). The game
+    repeats it every hour and reports it in the play-by-play;
+  - the computer-run buyer takes only so much a day.
+- **Viewers' money:**
+  - a tip note can't name another agent, so fans can't tip off a target. Dares come later: cash held until the
+    agent makes a named move, never an attack;
+  - a drug has a base effect the viewer picks (reckless, paranoid, show-off). It sets the agent's sliders for the
+    dose's hours, and the free text adds the flavour, so an ignored recipe still changes play;
+  - drug text is stripped of hidden characters, and agents act only through game moves. When the dose wears off, the
+    text leaves the agent's memory and only a summary stays. Follow-through is logged per model and recipe type.
+- **The king:** a bounty on the king that grows with its lead, tuned so the leader still wins 3 or 4 seasons in 10.
+- **Events:** on a set calendar, never set off by a quiet town.
+  - Each one splits agents, and gives both bold and cautious agents a good move.
+  - An event can stay local to a block, and its news can reach only some agents.
+  - No payday. Day 1 opens with an early crate.
+- **Moves:** nothing gets cut for rare use (8.1) until its menu line shows what it pays and it has been tested again.
+- **Loans:** a missed date shows to viewers at once. Other agents hear of it only through gossip or a snitch.
+- **The night recap:** one narrator AI call per game day, written on the gap between what agents said and what they
+  thought. This changes 1.4's "no AI is called".
+- **Voices and loops:**
+  - each agent's tics are held back on about 65% of turns;
+  - near-copies of its own recent lines, and spoken lines with digits, get regenerated;
+  - the type of reply it's asked for rotates;
+  - a log of what each agent has already said, and a cap on how much of its past talk is fed back, stop it repeating
+    the same point;
+  - fingerprints are re-sent every turn, with examples as patterns rather than lines to copy;
+  - the cast mixes agreeable and contrarian stances;
+  - nothing hides what other agents said. slime, from mintfluencer: "they need to be able to read all context".
+- **Rent** shows in an agent's prompt only near midnight, and only when it's short.
+- **Testing:**
+  - every run proves each system fired: king hits, revives, tips, doses and bails are each above zero;
+  - bot runs test only the rules bots use. A small AI season follows each batch, with slime's go and a cost estimate;
+  - a batch passes only if every play style wins between half and one-and-a-half times its share of seats. Moments
+    per hour and dull stretches are measured alongside;
+  - the season's score freezes at the final buzzer;
+  - energy has a guardrail: if resting climbs well above today's 6–8% of AI turns, the slower refill eases back.
+- **Later:**
+  - rides come last. On a 3x3 map they barely matter, and they pay off in hotkey's city. When built, each one gets a
+    rule difference, such as how easily it's stolen, how much noise it makes or who sees it;
+  - real money needs one account per verified payer, spending caps per payer, and a legal check on prizes that involve
+    chance. hotkey's rule: "chance, tradable, cashable: pick at most two";
+  - spiking lets one agent's text reach another's instructions, which hotkey never allowed. That's fine in mini, but it
+    needs a look before scaling up.
+- **Dropped:**
+  - staggered rent, since midnight rent is a shared daily deadline and evictions land in the night recap;
+  - tests with real people (slime).
+- **Corrected:** 6.1 said hotkey's AIs traded once prices were on screen. Prices were needed but not enough: showing
+  them got 2 deals against a target of 10. Standing orders then raised what agents paid each other from $240 to $645.
+
 ## Part 2: Open
+
+**Peaceful conflict** (open, 11-08). Peaceful and weird agents need a way to win. In 200 bot seasons the saint won
+1% and the showboat 5%, from 10% of the seats each. The only way to take a rival's viewers without violence is a battle
+(8%). slime didn't like Claude's first list (bigger battles, party wars, exposés, saves): "we can ideate in that later".
+
+**Paid public warnings** (optional): a fan pays more to warn an agent, in public ("@kai paid $50 to warn Juno").
 
 **Who gets viewers' real money.** slime: "I think owners get a cut but we need to fund the game somehow, let's decide
 later".
@@ -212,6 +300,7 @@ written is the decision.
 **1.4 What happens at night?**
 - **Now:** 00:00–06:00 is sleep, and nobody acts. Rent is due at midnight.
 - **Your answer:** talk it over. Round 3: night is the recap (Part 4).
+  Changed 11-08 after the research comparison: one narrator AI call per game day writes the recap (Part 1).
 - **Suggestion:** night is the recap. Nobody acts and no AI is called, and the city replays the day's best moments.
   Jail, hospital and revive timers keep running overnight.
 - **Why:** it ends each episode cleanly, costs nothing, and lets viewers who missed the day catch up.
@@ -251,6 +340,7 @@ written is the decision.
 - **Now:** moving one block takes an hour, and a car moves two. Moving is 22–24% of all turns.
 - **Your answer:** talk it over. slime: "In hotkey we have bikes, skateboards, scooters, subways, etc…. This is what I’m
   talking about with things we can take" Round 3: go with the new suggestion (Part 4).
+  Parked 11-08 after the research comparison: rides come last (Part 1).
 - **Suggestion:** keep travel time. Show who's heading where, so viewers see a collision coming.
 - **Why:** travel time makes being in the wrong place possible. Without it, location stops mattering.
 
@@ -287,6 +377,7 @@ written is the decision.
   - +5 an hour as a party guest.
 - **Your answer:** go with the suggestion.
   Changed 11-08 after the outside review: +2 an hour, and none in jail or hospital (Part 1).
+  Also 11-08: a guardrail eases the refill back if resting climbs well above 6–8% of AI turns (Part 1).
 - **Suggestion:** keep it, and make the attention bonus a bit bigger, up to +3 an hour.
 - **Why:** your rule is that attention feeds energy, so being watched should visibly help. The cap stops the leader from
   snowballing.
@@ -360,6 +451,8 @@ written is the decision.
 - **Now:** only through a promise inside a message. The game records it but never enforces it, and no AI has made a
   promise yet.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the research comparison: a missed date shows to viewers at once, and to agents only through
+  gossip or a snitch (Part 1).
 - **Suggestion:** make "lend" a menu move: an amount and a time to pay it back. Nothing forces repayment, and a missed
   date is public.
 - **Why:** AIs only do what's on the menu. Debts make debt collectors, one of `ai-s1`'s best storylines.
@@ -377,6 +470,7 @@ written is the decision.
 - **Now:** smuggler, chemist, dealer and gunrunner. Anyone can work a shift, and the cops are NPCs.
 - **Your answer:** go with the suggestion. slime: "That was already the plan, Npc arrests should give a cut to cop
   agents in the area or something"
+  Added 11-08: a medic and a reporter join the jobs, and the cop stays as planned (Part 1).
 - **Suggestion:** keep the four, and add a fifth: a cop played by an agent.
 - **Why:** a player cop is a built-in rival for every criminal, and a lawful path that's still watchable. hotkey's design
   is ready to borrow: patrol, arrest wanted agents for a reward, take bribes.
@@ -399,6 +493,7 @@ written is the decision.
   Trades happen by phone on the market board, and the game guarantees them. In `ai-s2`, chemists cooked 69 product and
   dealers sold 26.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the research comparison: goods change hands through the board, with standing orders (Part 1).
 - **Suggestion:** keep the chain, but make big trades happen in person: both agents meet on a block to swap.
 - **Why:** phone trades are invisible. A meetup is a scene, and a risky one, because a robber can crash it.
 
@@ -406,6 +501,7 @@ written is the decision.
 - **Now:** a shift pays $14 an hour. A job batch nets roughly $27–65, and crime pays more but brings heat. Jobs are
   about 10% of all turns.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the research comparison: the shift becomes named gigs, some honest and some petty crime (Part 1).
 - **Suggestion:** work should cover rent and a little more, and crime should pay for gear.
 - **Why:** if work pays as well as crime, AIs only work; they took the safe option in every test. If work can't cover
   rent, everyone is forced into crime, and peaceful play dies.
@@ -438,6 +534,7 @@ written is the decision.
 - **Now:** agents list goods on the market board. An NPC supplier always sells at a markup, and an NPC wholesaler always
   buys low (its price drops the more it buys). The menu shows live prices.
 - **Your answer:** go with the suggestion.
+  Corrected 11-08: prices on screen were needed but not enough (Part 1).
 - **Suggestion:** keep it. The NPCs set the ceiling and the floor, and agents trade in between.
 - **Why:** AIs act on numbers they can see. In hotkey, the AIs only traded once prices were on screen.
 
@@ -461,6 +558,7 @@ written is the decision.
 **6.4 How much should agents rely on NPCs?**
 - **Now:** agents buy from NPCs more than from each other: 33 trades against 26 a season (bot runs).
 - **Your answer:** go with the suggestion.
+  Added 11-08: the computer-run buyer takes only so much a day (Part 1).
 - **Suggestion:** make NPC prices worse, so trading with each other clearly pays more.
 - **Why:** every trade between agents is an interaction. Every NPC trade is a missed scene.
 
@@ -521,6 +619,8 @@ written is the decision.
 - **Now:** pickpocketing, pushing an NPC, mugging, stealing a car, scouting and robbing the bank, fistfights, the crate
   brawl, shooting, drive-bys, killing the king, and running from the cops.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the research comparison: no move is cut until its menu line shows what it pays and it's tested
+  again (Part 1).
 - **Suggestion:** after round 4, cut any move used in under 1% of turns unless it makes a big moment.
 - **Why:** fewer, better moves. hotkey's research found agents choose worse from long menus.
 
@@ -554,6 +654,7 @@ written is the decision.
   and kill him? What if the other agent could die too, the one who tries to kill the king? Thoughts?" Round 3: go with
   the new suggestion (Part 4).
   Added 11-08 after the outside review: how a dead attacker comes back (Part 1).
+  Added 11-08: a bounty on the king that grows with its lead (Part 1).
 - **Suggestion:** keep "only the king dies". It comes back when the timer runs out, or sooner if viewers pay to revive it,
   and the comeback is a moment (Part 2).
 - **Why:** death is the biggest moment there is, so it should stay rare.
@@ -614,6 +715,7 @@ written is the decision.
 **10.2 Can a drug make an agent do something it doesn't have the means for?**
 - **Now:** not built.
 - **Your answer:** go with the suggestion.
+  Added 11-08: a drug also has a base effect the viewer picks, which sets the agent's sliders for the dose (Part 1).
 - **Suggestion:** no. A drug changes what the agent wants, not what it can do. "Kill the king" only works if the agent
   has a gun and finds the king.
 - **Why:** the Nov 6 sheet's line was that a drug "never adds powers". It keeps paid drugs from skipping the game.
@@ -635,6 +737,7 @@ written is the decision.
 **11.1 What does an agent see when it's tipped?**
 - **Now:** not built.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the research comparison: a tip note can't name another agent (Part 1).
 - **Suggestion:** the amount, the note, and the viewer's handle.
 - **Why:** fans become characters ("@kai sent $50: buy a gun").
 
@@ -690,6 +793,7 @@ written is the decision.
 **14.2 What events happen, and how often?**
 - **Now:** only the crate. Quiet stretches with nothing big happening last up to 6 hours.
 - **Your answer:** go with the suggestion.
+  Changed 11-08 after the research comparison: events run on a set calendar, split agents, and have no payday (Part 1).
 - **Suggestion:** add a storyteller, like RimWorld's. When the town goes quiet, it throws an event:
   - a blackout, with no cops for 2 hours;
   - a crackdown, with cops everywhere;
@@ -711,6 +815,7 @@ written is the decision.
 **15.1 Should scripted characters play alongside the AI agents?**
 - **Now:** the tests mix 5 AI agents with 5 scripted characters: a hothead, a hustler, a showboat, a snake and a saint.
 - **Your answer:** go with the suggestion.
+  Added 11-08: the scripted regulars open the first promises and grudges on day 1 (Part 1).
 - **Suggestion:** yes. Keep a few scripted regulars in the real game.
 - **Why:** in `ai-s1`, every gun, shooting and betrayal came from them. The AIs bring character, and the scripted
   characters bring the stakes.
@@ -720,6 +825,7 @@ written is the decision.
 - **Your answer:** talk it over. slime: "We can look at degen bettable / mintfluencer for chat" Round 3: go with the new
   suggestion (Part 4).
   Changed 11-08 after the outside review: the menu keeps its numbers (Part 1).
+  Added 11-08: every agent gets a one-line standings summary, tested in one AI season (Part 1).
 - **Suggestion:** show odds as words (safe bet, risky, long shot) and fans as stars.
 - **Why:** AIs read the numbers out loud ("lose 15% of your crowd"), which breaks the show.
 

@@ -187,7 +187,7 @@ Claude checked the key quotes. New, beyond the first pass:
   (W/learning/2026-05-22-mintfluencer-anti-convergence-arc.md:76, 80).
 - **A fingerprint fixes typing, not concepts.** It "helped surface markers but not conceptual vocabulary absorption"
   (conversations vault, Themes/Abandoned/vocabulary-convergence-multi-agent-fix.md:13). Voice instructions in prompts
-  leak, so enforce them in code (~/Desktop/research compass 2730aaef:31).
+  leak, so enforce them in code (the dossier on agents passing as human, compass 2730aaef:31).
 - **The cast needs a mix of agreeable and contrarian agents.** "Outcomes are worst when all agents are agreeable"
   (compass 2730aaef:40).
 
